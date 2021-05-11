@@ -1,0 +1,51 @@
+Caracteristicas generales
+
+ICAO: C152
+Capacidad: 2 puestos
+Envergadura: 33' 4" (10.16m)
+Longitud: 24' 1" (7.34m)
+Altura: 8' 6" (2.59m)
+Separación tren: 7' 7.25"
+Area del ala: 159.5 sq ft (14.9m2)
+Relación de aspecto: 6.7
+Peso vacío: 1109lb (503kg)
+Peso maximo rampa:1675lb (759.7kg)
+Peso max. TO/LDG: 1670lb (757.5kg)
+Capacidad combustible: 26usg 
+Capacidad con LR: 39usg
+Motor 1978: Lyc. O-235-L2C (110hp)
+Motor 1985: Lyc. O-235-N2C (110hp)(82kW)
+Helice: McCauley two-blade metal fixed-pitch propeller with spinner
+
+Desempeño
+
+VNE: 149 KIAS
+VNO: 111 KIAS
+VA:
+ 1670lbs: 104 KIAS
+ 1500lbs: 98 KIAS
+ 1350lbs: 39 KIAS
+VFE: 85 KIAS
+Rango: Standard fuel, 75% power at 2,440 m (8,000 ft): 345 nm (639 km; 397 miles)
+Max fuel, 75% power at 2,440 m (8,000 ft): 575 nm (1,065 km; 662 miles)
+Standard fuel, econ cruising power at 3,050 m (10,000 ft): 410 nm (760 km; 472 miles)
+Max fuel, econ cruising power at 3,050 m (10,000 ft): 685 nm (1,270 km; 789 miles)
+Techo de servicio: 14700ft (4480m)
+limites g: +4.4g/-1.76g
+Maxima rata de ascenso: 715fpm
+Maxima carga del ala: 51.3 kg/m2 (10.5 psf)
+Ruedas principales: 6.00-6
+Rueda de nariz: 5.00-5
+Alternador: 28V 60A
+Bateria: 24V, 14APH
+Airfoil: Root-NACA2412 TIP-NACA0012
+Flaps: 10, 20, 30
+Ailerons: 20up, 15dn
+Rudder: 23º L&R
+Elevator: 25ºup, 18ºdn
+Elev. trim tab: 10ºup, 20ºdn
+
+POH http://smartaero.pl/wp-content/uploads/2020/08/C152-POH_80.pdf
+Specs: https://www.skytamer.com/Cessna_152.html
+AOPA: https://www.aopa.org/go-fly/aircraft-and-ownership/aircraft-fact-sheets/cessna-152#:~:text=The%20engine%20is%20a%20Lycoming,to%2019.5%20gallons%20per%20tank.
+Mantainance manual: http://www.ameacademy.com/pdf/cessna/Cessna_152_1978-1985_MM_D2064-1-13.pdf
