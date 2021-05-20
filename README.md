@@ -5,4 +5,6 @@ Contributors fork and create pull requests.
 
 Modeling with blender 2.83
 
+Support the project https://www.paypal.com/donate?hosted_button_id=K3BFBBSVJ6ZB8
+
 Licensed under Creative Commons https://creativecommons.org/licenses/by-nc/4.0/
