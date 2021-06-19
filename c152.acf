@@ -182,7 +182,7 @@ P _gear/1/_lonE 14.0
 P _gear/1/_lonN 14.0
 P _gear/1/_lonR 0.0
 P _gear/1/_scon 3572.762451172
-P _gear/1/_stat_def 0.173137277
+P _gear/1/_stat_def 0.173137292
 P _gear/1/_steerdeg_hispeed 0.0
 P _gear/1/_steerdeg_lospeed 0.0
 P _gear/1/_strut_comp 0.0
@@ -216,7 +216,7 @@ P _gear/2/_lonE 14.0
 P _gear/2/_lonN 14.0
 P _gear/2/_lonR 0.0
 P _gear/2/_scon 3572.762451172
-P _gear/2/_stat_def 0.173137277
+P _gear/2/_stat_def 0.173137292
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
@@ -28688,9 +28688,9 @@ P acf/_part_descrip/92 Nosegear axle truck
 P acf/_part_descrip/93 Nosegear steering link arm2
 P acf/_part_descrip/94 Nosegear axle truck
 P acf/_part_descrip/count 95
-P acf/_pe_xyz/0 -0.656167984
-P acf/_pe_xyz/1 0.918635190
-P acf/_pe_xyz/2 6.561679840
+P acf/_pe_xyz/0 -0.688976347
+P acf/_pe_xyz/1 0.820209980
+P acf/_pe_xyz/2 7.874015808
 P acf/_pe_xyz/count 3
 P acf/_phase_hdng_tvect_in_at_00 0
 P acf/_phase_hdng_tvect_in_at_90 0
