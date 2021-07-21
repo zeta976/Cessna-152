@@ -89,93 +89,48 @@ C152_circuit_breakers = deferred_dataref("ZLSimulation/C152/electrical/circuit_b
 --[[ Circuit Breakers Command Handlers]]
 
 function circuit_breaker_1_CMDhandler()
-   if C152_circuit_breakers[0] == 1 then
-      C152_circuit_breakers[0] = 0
-   else 
-      C152_circuit_breakers[0] = 1
-   end
+   C152_circuit_breakers[0] = 1 - C152_circuit_breakers[0]
 end
 
 function circuit_breaker_2_CMDhandler()
-   if C152_circuit_breakers[1] == 1 then
-      C152_circuit_breakers[1] = 0
-   else 
-      C152_circuit_breakers[1] = 1
-   end
+   C152_circuit_breakers[1] = 1 - C152_circuit_breakers[1]
 end
 
 function circuit_breaker_3_CMDhandler()
-   if C152_circuit_breakers[2] == 1 then
-      C152_circuit_breakers[2] = 0
-   else 
-      C152_circuit_breakers[2] = 1
-   end
+   C152_circuit_breakers[2] = 1 - C152_circuit_breakers[2]
 end
 
 function circuit_breaker_4_CMDhandler()
-   if C152_circuit_breakers[3] == 1 then
-      C152_circuit_breakers[3] = 0
-   else
-      C152_circuit_breakers[3] = 1
-   end
+   C152_circuit_breakers[3] = 1 - C152_circuit_breakers[3]
 end
 
 function circuit_breaker_5_CMDhandler()
-   if C152_circuit_breakers[4] == 1 then
-      C152_circuit_breakers[4] = 0
-   else 
-      C152_circuit_breakers[4] = 1
-   end
+   C152_circuit_breakers[4] = 1 - C152_circuit_breakers[4]
 end
 
 function circuit_breaker_6_CMDhandler()
-   if C152_circuit_breakers[5] == 1 then
-      C152_circuit_breakers[5] = 0
-   else 
-      C152_circuit_breakers[5] = 1
-   end
+   C152_circuit_breakers[5] = 1 - C152_circuit_breakers[5]
 end
 
 function circuit_breaker_7_CMDhandler()
-   if C152_circuit_breakers[6] == 1 then
-      C152_circuit_breakers[6] = 0
-   else 
-      C152_circuit_breakers[6] = 1
-   end
+   C152_circuit_breakers[6] = 1 - C152_circuit_breakers[6]
 end
 
 function circuit_breaker_8_CMDhandler()
-   if C152_circuit_breakers[7] == 1 then
-      C152_circuit_breakers[7] = 0
-   else 
-      C152_circuit_breakers[7] = 1
-   end
+   C152_circuit_breakers[7] = 1 - C152_circuit_breakers[7]
 end
 
 function circuit_breaker_9_CMDhandler()
-   if C152_circuit_breakers[8] == 1 then
-      C152_circuit_breakers[8] = 0
-   else 
-      C152_circuit_breakers[8] = 1
-   end
+   C152_circuit_breakers[8] = 1 - C152_circuit_breakers[8]
 end
 
 function circuit_breaker_10_CMDhandler()
-   if C152_circuit_breakers[9] == 1 then
-      C152_circuit_breakers[9] = 0
-   else 
-      C152_circuit_breakers[9] = 1
-   end
+   C152_circuit_breakers[9] = 1 - C152_circuit_breakers[9]
 end
 
 function circuit_breaker_11_CMDhandler()
-   if C152_circuit_breakers[10] == 1 then
-      C152_circuit_breakers[10] = 0
-   else 
-      C152_circuit_breakers[10] = 1
-   end
+   C152_circuit_breakers[10] = 1 - C152_circuit_breakers[10]
 end
-
 
 --*************************************************************************************--
 --**                              CREATE CUSTOM COMMANDS                             **--
