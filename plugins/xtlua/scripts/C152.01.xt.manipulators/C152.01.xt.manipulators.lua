@@ -88,48 +88,70 @@ C152_circuit_breakers = deferred_dataref("ZLSimulation/C152/electrical/circuit_b
 --*************************************************************************************--
 --[[ Circuit Breakers Command Handlers]]
 
-function circuit_breaker_1_CMDhandler()
-   C152_circuit_breakers[0] = 1 - C152_circuit_breakers[0]
+function circuit_breaker_1_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[0] = 1 - C152_circuit_breakers[0]
+    end
 end
 
-function circuit_breaker_2_CMDhandler()
-   C152_circuit_breakers[1] = 1 - C152_circuit_breakers[1]
+function circuit_breaker_2_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[1] = 1 - C152_circuit_breakers[1]
+    end
 end
 
-function circuit_breaker_3_CMDhandler()
-   C152_circuit_breakers[2] = 1 - C152_circuit_breakers[2]
+function circuit_breaker_3_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[2] = 1 - C152_circuit_breakers[2]
+    end
 end
 
-function circuit_breaker_4_CMDhandler()
-   C152_circuit_breakers[3] = 1 - C152_circuit_breakers[3]
+function circuit_breaker_4_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[3] = 1 - C152_circuit_breakers[3]
+    end
 end
 
-function circuit_breaker_5_CMDhandler()
-   C152_circuit_breakers[4] = 1 - C152_circuit_breakers[4]
+function circuit_breaker_5_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[4] = 1 - C152_circuit_breakers[4]
+    end  
 end
 
-function circuit_breaker_6_CMDhandler()
-   C152_circuit_breakers[5] = 1 - C152_circuit_breakers[5]
+function circuit_breaker_6_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[5] = 1 - C152_circuit_breakers[5]
+    end
 end
 
-function circuit_breaker_7_CMDhandler()
-   C152_circuit_breakers[6] = 1 - C152_circuit_breakers[6]
+function circuit_breaker_7_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[6] = 1 - C152_circuit_breakers[6]
+    end
 end
 
-function circuit_breaker_8_CMDhandler()
-   C152_circuit_breakers[7] = 1 - C152_circuit_breakers[7]
+function circuit_breaker_8_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[7] = 1 - C152_circuit_breakers[7]
+    end
 end
 
-function circuit_breaker_9_CMDhandler()
-   C152_circuit_breakers[8] = 1 - C152_circuit_breakers[8]
+function circuit_breaker_9_CMDhandler(phase, duration)
+    if phase == 0 then
+    C152_circuit_breakers[8] = 1 - C152_circuit_breakers[8]
+    end
 end
 
-function circuit_breaker_10_CMDhandler()
-   C152_circuit_breakers[9] = 1 - C152_circuit_breakers[9]
+function circuit_breaker_10_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[9] = 1 - C152_circuit_breakers[9]
+    end
 end
 
-function circuit_breaker_11_CMDhandler()
-   C152_circuit_breakers[10] = 1 - C152_circuit_breakers[10]
+function circuit_breaker_11_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_circuit_breakers[10] = 1 - C152_circuit_breakers[10]
+    end
 end
 
 --*************************************************************************************--
