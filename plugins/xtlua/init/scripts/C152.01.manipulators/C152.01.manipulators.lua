@@ -1,8 +1,11 @@
 --[[
 *****************************************************************************************
-* Script Name:
-* Author Name:
-* Script Description:
+
+Copyright Alejandro Zuluaga 2021. All rights reserved
+
+This file and its contents are suplied under the terms of the
+Creative Commons Attribution 4.0 International Public License (CC BY-NC 4.0)
+
 *****************************************************************************************
 --]]
 
@@ -25,6 +28,8 @@ end
 --**                             CREATE CUSTOM COMMANDS                              **--
 --*************************************************************************************--
 
+
+
 C152CMD_CircuitBreaker_1_toggle  = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_1_toggle", "toggle circuit breaker 1", circuit_breaker_1_CMDhandler) 
 C152CMD_CircuitBreaker_2_toggle  = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_2_toggle", "toggle circuit breaker 2", circuit_breaker_2_CMDhandler)
 C152CMD_CircuitBreaker_3_toggle  = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_3_toggle", "toggle circuit breaker 3", circuit_breaker_3_CMDhandler)
@@ -36,11 +41,18 @@ C152CMD_CircuitBreaker_8_toggle  = deferred_command("ZLSimulation/C152/electrica
 C152CMD_CircuitBreaker_9_toggle  = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_9_toggle", "toggle circuit breaker 9", circuit_breaker_9_CMDhandler)
 C152CMD_CircuitBreaker_10_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_10_toggle", "toggle circuit breaker 10", circuit_breaker_10_CMDhandler)
 C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_11_toggle", "toggle circuit breaker 11", circuit_breaker_11_CMDhandler)
+C152CMD_drawer_toggle            = deferred_command("ZlSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 
 
 --*************************************************************************************--
 --**                             CREATE CUSTOM DATAREFS                              **--
 --*************************************************************************************--
-
-C152_circuit_breakers = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") -- Dataref to hold circuit breaker position
-
+C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") --Dataref to hold alternator switch position
+C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]")
+C152_landing_light_switch = deferred_dataref("ZLSimulation/C152/electrical/landing_light_switch", "number")
+C152_pitot_heat_switch    = deferred_dataref("ZLSimulation/C152/electrical/pitot_heat_switch", "number")
+C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beacon_light_switch", "number")
+C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number")
+C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number")
+C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number")
+C152_drawer               = deferred_dataref("ZlSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
