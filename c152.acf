@@ -128,18 +128,18 @@ P _gear/0/_axiE 0.0
 P _gear/0/_axiN 0.0
 P _gear/0/_axiR 0.0
 P _gear/0/_cyc_time 5.0
-P _gear/0/_damp 303.684783936
+P _gear/0/_damp 357.276245117
 P _gear/0/_eagle_claw_deg 10.0
 P _gear/0/_gear_brakes 0
 P _gear/0/_gear_can_retract 0
 P _gear/0/_gear_castors 0
 P _gear/0/_gear_def_empty 0.0
 P _gear/0/_gear_def_gross 0.0
-P _gear/0/_gear_load_fraction 0.294745266
+P _gear/0/_gear_load_fraction 0.285626739
 P _gear/0/_gear_type 2
 P _gear/0/_gear_x 0.0
-P _gear/0/_gear_y -1.968503952
-P _gear/0/_gear_z 2.788713932
+P _gear/0/_gear_y -2.034120798
+P _gear/0/_gear_z 2.887139082
 P _gear/0/_latE 0.0
 P _gear/0/_latN 0.0
 P _gear/0/_latR 0.0
@@ -147,8 +147,8 @@ P _gear/0/_leg_len 2.296587944
 P _gear/0/_lonE 11.0
 P _gear/0/_lonN 11.0
 P _gear/0/_lonR 0.0
-P _gear/0/_scon 3036.847900391
-P _gear/0/_stat_def 0.170256108
+P _gear/0/_scon 3572.762451172
+P _gear/0/_stat_def 0.140350103
 P _gear/0/_steerdeg_hispeed 10.0
 P _gear/0/_steerdeg_lospeed 42.0
 P _gear/0/_strut_comp 0.0
@@ -156,7 +156,7 @@ P _gear/0/_strut_s1 0.0
 P _gear/0/_strut_s2 0.015625000
 P _gear/0/_strut_t1 0.128906250
 P _gear/0/_strut_t2 0.252929688
-P _gear/0/_tire_radius 0.557742774
+P _gear/0/_tire_radius 0.656167984
 P _gear/0/_tire_swidth 0.262467176
 P _gear/1/_axiE 0.0
 P _gear/1/_axiN 0.0
@@ -169,7 +169,7 @@ P _gear/1/_gear_can_retract 0
 P _gear/1/_gear_castors 0
 P _gear/1/_gear_def_empty 0.0
 P _gear/1/_gear_def_gross 0.0
-P _gear/1/_gear_load_fraction 0.352627337
+P _gear/1/_gear_load_fraction 0.357186615
 P _gear/1/_gear_type 2
 P _gear/1/_gear_x 1.279527545
 P _gear/1/_gear_y -2.099737406
@@ -182,7 +182,7 @@ P _gear/1/_lonE 14.0
 P _gear/1/_lonN 14.0
 P _gear/1/_lonR 0.0
 P _gear/1/_scon 3572.762451172
-P _gear/1/_stat_def 0.173137322
+P _gear/1/_stat_def 0.175309196
 P _gear/1/_steerdeg_hispeed 0.0
 P _gear/1/_steerdeg_lospeed 0.0
 P _gear/1/_strut_comp 0.0
@@ -203,7 +203,7 @@ P _gear/2/_gear_can_retract 0
 P _gear/2/_gear_castors 0
 P _gear/2/_gear_def_empty 0.0
 P _gear/2/_gear_def_gross 0.0
-P _gear/2/_gear_load_fraction 0.352627337
+P _gear/2/_gear_load_fraction 0.357186615
 P _gear/2/_gear_type 2
 P _gear/2/_gear_x -1.279527545
 P _gear/2/_gear_y -2.099737406
@@ -216,7 +216,7 @@ P _gear/2/_lonE 14.0
 P _gear/2/_lonN 14.0
 P _gear/2/_lonR 0.0
 P _gear/2/_scon 3572.762451172
-P _gear/2/_stat_def 0.173137322
+P _gear/2/_stat_def 0.175309196
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
@@ -266,7 +266,7 @@ P _obja/0/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/0/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/0/_v10_is_internal -809462224
 P _obja/0/_v10_steers_with_gear 0
-P _obja/1/_obj_flags 20
+P _obja/1/_obj_flags 16
 P _obja/1/_v10_att_file_stl Fuselage.obj
 P _obja/1/_v10_att_part -1
 P _obja/1/_v10_att_phi_ref 0.0
@@ -277,7 +277,7 @@ P _obja/1/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/1/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/1/_v10_is_internal -1739352528
 P _obja/1/_v10_steers_with_gear 0
-P _obja/2/_obj_flags 4
+P _obja/2/_obj_flags 0
 P _obja/2/_v10_att_file_stl Interior1.obj
 P _obja/2/_v10_att_part -1
 P _obja/2/_v10_att_phi_ref 0.0
@@ -288,7 +288,7 @@ P _obja/2/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/2/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/2/_v10_is_internal -1398630864
 P _obja/2/_v10_steers_with_gear 0
-P _obja/3/_obj_flags 4
+P _obja/3/_obj_flags 0
 P _obja/3/_v10_att_file_stl GNS430.obj
 P _obja/3/_v10_att_part -1
 P _obja/3/_v10_att_phi_ref 0.0
@@ -310,7 +310,7 @@ P _obja/4/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/4/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/4/_v10_is_internal -1398630864
 P _obja/4/_v10_steers_with_gear 0
-P _obja/5/_obj_flags 29
+P _obja/5/_obj_flags 25
 P _obja/5/_v10_att_file_stl Instruments.obj
 P _obja/5/_v10_att_part -1
 P _obja/5/_v10_att_phi_ref 0.0
@@ -321,8 +321,19 @@ P _obja/5/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/5/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/5/_v10_is_internal -1923574224
 P _obja/5/_v10_steers_with_gear 0
-P _obja/count 6
-P _panel_inst_3d 9
+P _obja/6/_obj_flags 0
+P _obja/6/_v10_att_file_stl Landing_gear.obj
+P _obja/6/_v10_att_part -1
+P _obja/6/_v10_att_phi_ref 0.0
+P _obja/6/_v10_att_psi_ref 0.0
+P _obja/6/_v10_att_the_ref 0.0
+P _obja/6/_v10_att_x_acf_prt_ref 0.0
+P _obja/6/_v10_att_y_acf_prt_ref 0.688976347
+P _obja/6/_v10_att_z_acf_prt_ref 13.188976288
+P _obja/6/_v10_is_internal -1113680336
+P _obja/6/_v10_steers_with_gear 0
+P _obja/count 7
+P _panel_inst_3d 11
 P _part/0/_bot_s1 0.0
 P _part/0/_bot_s2 0.0
 P _part/0/_bot_t1 0.0
@@ -17948,12 +17959,12 @@ P _part/85/_part_phi 0.0
 P _part/85/_part_psi 0.0
 P _part/85/_part_rad 2.0
 P _part/85/_part_specs_eq 0
-P _part/85/_part_specs_invis 0
+P _part/85/_part_specs_invis 1
 P _part/85/_part_tex 0
 P _part/85/_part_the 0.0
 P _part/85/_part_x 0.0
-P _part/85/_part_y -4.052640915
-P _part/85/_part_z 2.350504160
+P _part/85/_part_y -4.148163795
+P _part/85/_part_z 2.448929310
 P _part/85/_patt_con 0
 P _part/85/_patt_prt 0
 P _part/85/_patt_rat 0.0
@@ -19422,7 +19433,7 @@ P _part/86/_part_specs_invis 0
 P _part/86/_part_tex 0
 P _part/86/_part_the 0.0
 P _part/86/_part_x 4.342204094
-P _part/86/_part_y -3.624269009
+P _part/86/_part_y -3.622097254
 P _part/86/_part_z 7.821148396
 P _part/86/_patt_con 0
 P _part/86/_patt_prt 0
@@ -20892,7 +20903,7 @@ P _part/87/_part_specs_invis 0
 P _part/87/_part_tex 0
 P _part/87/_part_the 0.0
 P _part/87/_part_x -4.342204094
-P _part/87/_part_y -3.624269009
+P _part/87/_part_y -3.622097254
 P _part/87/_part_z 7.821148396
 P _part/87/_patt_con 0
 P _part/87/_patt_prt 0
@@ -26841,7 +26852,7 @@ P acf/_ball_ang_acc_deg_ss 0.0
 P acf/_ball_ang_def_deg 0.0
 P acf/_ball_ang_spd_deg_s 0.0
 P acf/_batt_power_rat/0 0.0
-P acf/_batt_power_rat/1 0.316227764
+P acf/_batt_power_rat/1 0.312925130
 P acf/_batt_power_rat/10 1.0
 P acf/_batt_power_rat/2 0.447213590
 P acf/_batt_power_rat/3 0.547722578
@@ -27902,13 +27913,13 @@ P acf/_esys_amperage/115 0.0
 P acf/_esys_amperage/116 0.0
 P acf/_esys_amperage/117 0.0
 P acf/_esys_amperage/120 0.0
-P acf/_esys_amperage/124 3.0
-P acf/_esys_amperage/125 4.0
-P acf/_esys_amperage/126 5.0
-P acf/_esys_amperage/127 4.0
-P acf/_esys_amperage/128 10.0
-P acf/_esys_amperage/129 2.0
-P acf/_esys_amperage/130 2.0
+P acf/_esys_amperage/124 2.500000000
+P acf/_esys_amperage/125 0.0
+P acf/_esys_amperage/126 6.0
+P acf/_esys_amperage/127 0.0
+P acf/_esys_amperage/128 8.899999619
+P acf/_esys_amperage/129 0.200000003
+P acf/_esys_amperage/130 0.0
 P acf/_esys_amperage/131 0.0
 P acf/_esys_amperage/150 0.0
 P acf/_esys_amperage/151 0.0
@@ -27916,7 +27927,7 @@ P acf/_esys_amperage/152 0.0
 P acf/_esys_amperage/153 0.0
 P acf/_esys_amperage/154 0.0
 P acf/_esys_amperage/155 0.0
-P acf/_esys_amperage/156 10.0
+P acf/_esys_amperage/156 2.900000095
 P acf/_esys_amperage/157 0.0
 P acf/_esys_amperage/158 0.0
 P acf/_esys_amperage/159 0.0
@@ -27933,8 +27944,8 @@ P acf/_esys_amperage/199 0.0
 P acf/_esys_amperage/200 0.0
 P acf/_esys_amperage/201 0.0
 P acf/_esys_amperage/204 0.0
-P acf/_esys_amperage/215 0.0
-P acf/_esys_amperage/30 2.0
+P acf/_esys_amperage/215 0.100000001
+P acf/_esys_amperage/30 0.0
 P acf/_esys_amperage/31 0.0
 P acf/_esys_amperage/32 0.0
 P acf/_esys_amperage/33 0.0
@@ -27942,41 +27953,41 @@ P acf/_esys_amperage/34 0.0
 P acf/_esys_amperage/35 0.0
 P acf/_esys_amperage/36 0.0
 P acf/_esys_amperage/37 0.0
-P acf/_esys_amperage/38 10.0
-P acf/_esys_amperage/42 0.0
+P acf/_esys_amperage/38 0.0
+P acf/_esys_amperage/42 0.200000003
 P acf/_esys_amperage/48 0.0
 P acf/_esys_amperage/492 0.0
-P acf/_esys_amperage/493 1.0
+P acf/_esys_amperage/493 0.0
 P acf/_esys_amperage/51 0.0
 P acf/_esys_amperage/52 0.0
 P acf/_esys_amperage/53 0.0
 P acf/_esys_amperage/54 0.0
-P acf/_esys_amperage/56 4.0
-P acf/_esys_amperage/57 2.0
-P acf/_esys_amperage/58 4.0
+P acf/_esys_amperage/56 2.0
+P acf/_esys_amperage/57 0.0
+P acf/_esys_amperage/58 0.0
 P acf/_esys_amperage/59 0.0
-P acf/_esys_amperage/60 0.0
+P acf/_esys_amperage/60 2.099999905
 P acf/_esys_amperage/61 0.0
 P acf/_esys_amperage/62 0.0
-P acf/_esys_amperage/66 1.0
-P acf/_esys_amperage/67 0.0
+P acf/_esys_amperage/66 2.0
+P acf/_esys_amperage/67 0.100000001
 P acf/_esys_amperage/74 0.0
 P acf/_esys_amperage/75 0.0
 P acf/_esys_amperage/76 0.0
-P acf/_esys_amperage/80 1.0
-P acf/_esys_amperage/81 13.0
+P acf/_esys_amperage/80 0.0
+P acf/_esys_amperage/81 8.500000000
 P acf/_esys_amperage/88 0.0
 P acf/_esys_amperage/rel_AOA 0.0
-P acf/_esys_amperage/rel_HVAC 10.0
+P acf/_esys_amperage/rel_HVAC 0.0
 P acf/_esys_amperage/rel_adc_comp 0.0
-P acf/_esys_amperage/rel_adf1 4.0
+P acf/_esys_amperage/rel_adf1 0.0
 P acf/_esys_amperage/rel_adf2 0.0
 P acf/_esys_amperage/rel_ail_trim 0.0
 P acf/_esys_amperage/rel_auto_comp 0.0
 P acf/_esys_amperage/rel_auto_servos 0.0
-P acf/_esys_amperage/rel_avionics_fan 1.0
-P acf/_esys_amperage/rel_bad_fuel 0.0
-P acf/_esys_amperage/rel_bus0 2.0
+P acf/_esys_amperage/rel_avionics_fan 0.0
+P acf/_esys_amperage/rel_bad_fuel 0.100000001
+P acf/_esys_amperage/rel_bus0 0.0
 P acf/_esys_amperage/rel_bus1 0.0
 P acf/_esys_amperage/rel_bus2 0.0
 P acf/_esys_amperage/rel_bus3 0.0
@@ -27990,7 +28001,7 @@ P acf/_esys_amperage/rel_dice_alt_air_a_0 0.0
 P acf/_esys_amperage/rel_dice_alt_air_a_1 0.0
 P acf/_esys_amperage/rel_dice_brake_heat 0.0
 P acf/_esys_amperage/rel_dice_detect 0.0
-P acf/_esys_amperage/rel_dice_pitot_heat_0 10.0
+P acf/_esys_amperage/rel_dice_pitot_heat_0 2.900000095
 P acf/_esys_amperage/rel_dice_pitot_heat_1 0.0
 P acf/_esys_amperage/rel_dice_stat_heat_0 0.0
 P acf/_esys_amperage/rel_dice_stat_heat_1 0.0
@@ -28012,7 +28023,7 @@ P acf/_esys_amperage/rel_elec_gyr0 0.0
 P acf/_esys_amperage/rel_elec_gyr1 0.0
 P acf/_esys_amperage/rel_elv_trim 0.0
 P acf/_esys_amperage/rel_engn_sync 0.0
-P acf/_esys_amperage/rel_flap_act 13.0
+P acf/_esys_amperage/rel_flap_act 8.500000000
 P acf/_esys_amperage/rel_g_AHRS 0.0
 P acf/_esys_amperage/rel_g_gea 0.0
 P acf/_esys_amperage/rel_g_gia1 0.0
@@ -28020,7 +28031,7 @@ P acf/_esys_amperage/rel_g_gia2 0.0
 P acf/_esys_amperage/rel_g_magmtr 0.0
 P acf/_esys_amperage/rel_gear_act 0.0
 P acf/_esys_amperage/rel_gen_esys 0.0
-P acf/_esys_amperage/rel_gps1 0.0
+P acf/_esys_amperage/rel_gps1 2.099999905
 P acf/_esys_amperage/rel_gps2 0.0
 P acf/_esys_amperage/rel_heatIN0 0.0
 P acf/_esys_amperage/rel_heatIN1 0.0
@@ -28048,21 +28059,21 @@ P acf/_esys_amperage/rel_ignitr6 0.0
 P acf/_esys_amperage/rel_ignitr7 0.0
 P acf/_esys_amperage/rel_inverter0 0.0
 P acf/_esys_amperage/rel_inverter1 0.0
-P acf/_esys_amperage/rel_lites_beac 5.0
+P acf/_esys_amperage/rel_lites_beac 6.0
 P acf/_esys_amperage/rel_lites_hud 0.0
-P acf/_esys_amperage/rel_lites_ins 2.0
-P acf/_esys_amperage/rel_lites_land 10.0
-P acf/_esys_amperage/rel_lites_nav 3.0
-P acf/_esys_amperage/rel_lites_pan 2.0
-P acf/_esys_amperage/rel_lites_strobe 4.0
-P acf/_esys_amperage/rel_lites_taxi 4.0
-P acf/_esys_amperage/rel_marker 0.0
-P acf/_esys_amperage/rel_navcom1 4.0
-P acf/_esys_amperage/rel_navcom2 2.0
-P acf/_esys_amperage/rel_pil_tsi 0.0
+P acf/_esys_amperage/rel_lites_ins 0.200000003
+P acf/_esys_amperage/rel_lites_land 8.899999619
+P acf/_esys_amperage/rel_lites_nav 2.500000000
+P acf/_esys_amperage/rel_lites_pan 0.0
+P acf/_esys_amperage/rel_lites_strobe 0.0
+P acf/_esys_amperage/rel_lites_taxi 0.0
+P acf/_esys_amperage/rel_marker 0.100000001
+P acf/_esys_amperage/rel_navcom1 2.0
+P acf/_esys_amperage/rel_navcom2 0.0
+P acf/_esys_amperage/rel_pil_tsi 0.200000003
 P acf/_esys_amperage/rel_rud_trim 0.0
 P acf/_esys_amperage/rel_servo_thro 0.0
-P acf/_esys_amperage/rel_slats 1.0
+P acf/_esys_amperage/rel_slats 0.0
 P acf/_esys_amperage/rel_stab_aug 0.0
 P acf/_esys_amperage/rel_stall_warn 0.0
 P acf/_esys_amperage/rel_startr0 50.0
@@ -28073,7 +28084,7 @@ P acf/_esys_amperage/rel_startr4 0.0
 P acf/_esys_amperage/rel_startr5 0.0
 P acf/_esys_amperage/rel_startr6 0.0
 P acf/_esys_amperage/rel_startr7 0.0
-P acf/_esys_amperage/rel_xpndr 1.0
+P acf/_esys_amperage/rel_xpndr 2.0
 P acf/_esys_amperage/rel_yaw_damp 0.0
 P acf/_esys_bus_bit_add/110 0
 P acf/_esys_bus_bit_add/112 0
@@ -28082,12 +28093,12 @@ P acf/_esys_bus_bit_add/116 0
 P acf/_esys_bus_bit_add/117 0
 P acf/_esys_bus_bit_add/120 0
 P acf/_esys_bus_bit_add/124 1
-P acf/_esys_bus_bit_add/125 1
+P acf/_esys_bus_bit_add/125 0
 P acf/_esys_bus_bit_add/126 1
-P acf/_esys_bus_bit_add/127 1
+P acf/_esys_bus_bit_add/127 0
 P acf/_esys_bus_bit_add/128 1
 P acf/_esys_bus_bit_add/129 1
-P acf/_esys_bus_bit_add/130 1
+P acf/_esys_bus_bit_add/130 0
 P acf/_esys_bus_bit_add/131 0
 P acf/_esys_bus_bit_add/150 0
 P acf/_esys_bus_bit_add/151 0
@@ -28112,7 +28123,7 @@ P acf/_esys_bus_bit_add/199 0
 P acf/_esys_bus_bit_add/200 0
 P acf/_esys_bus_bit_add/201 0
 P acf/_esys_bus_bit_add/204 0
-P acf/_esys_bus_bit_add/215 0
+P acf/_esys_bus_bit_add/215 1
 P acf/_esys_bus_bit_add/30 1
 P acf/_esys_bus_bit_add/31 0
 P acf/_esys_bus_bit_add/32 0
@@ -28121,40 +28132,40 @@ P acf/_esys_bus_bit_add/34 0
 P acf/_esys_bus_bit_add/35 0
 P acf/_esys_bus_bit_add/36 0
 P acf/_esys_bus_bit_add/37 0
-P acf/_esys_bus_bit_add/38 1
-P acf/_esys_bus_bit_add/42 0
+P acf/_esys_bus_bit_add/38 0
+P acf/_esys_bus_bit_add/42 1
 P acf/_esys_bus_bit_add/48 0
 P acf/_esys_bus_bit_add/492 1
-P acf/_esys_bus_bit_add/493 1
+P acf/_esys_bus_bit_add/493 0
 P acf/_esys_bus_bit_add/51 0
 P acf/_esys_bus_bit_add/52 0
 P acf/_esys_bus_bit_add/53 0
 P acf/_esys_bus_bit_add/54 0
 P acf/_esys_bus_bit_add/56 1
-P acf/_esys_bus_bit_add/57 1
-P acf/_esys_bus_bit_add/58 1
+P acf/_esys_bus_bit_add/57 0
+P acf/_esys_bus_bit_add/58 0
 P acf/_esys_bus_bit_add/59 0
-P acf/_esys_bus_bit_add/60 0
+P acf/_esys_bus_bit_add/60 1
 P acf/_esys_bus_bit_add/61 0
 P acf/_esys_bus_bit_add/62 0
 P acf/_esys_bus_bit_add/66 1
-P acf/_esys_bus_bit_add/67 0
+P acf/_esys_bus_bit_add/67 1
 P acf/_esys_bus_bit_add/74 0
 P acf/_esys_bus_bit_add/75 0
 P acf/_esys_bus_bit_add/76 0
-P acf/_esys_bus_bit_add/80 1
+P acf/_esys_bus_bit_add/80 0
 P acf/_esys_bus_bit_add/81 1
 P acf/_esys_bus_bit_add/88 0
 P acf/_esys_bus_bit_add/rel_AOA 0
-P acf/_esys_bus_bit_add/rel_HVAC 1
+P acf/_esys_bus_bit_add/rel_HVAC 0
 P acf/_esys_bus_bit_add/rel_adc_comp 0
-P acf/_esys_bus_bit_add/rel_adf1 1
+P acf/_esys_bus_bit_add/rel_adf1 0
 P acf/_esys_bus_bit_add/rel_adf2 0
 P acf/_esys_bus_bit_add/rel_ail_trim 0
 P acf/_esys_bus_bit_add/rel_auto_comp 0
 P acf/_esys_bus_bit_add/rel_auto_servos 0
-P acf/_esys_bus_bit_add/rel_avionics_fan 1
-P acf/_esys_bus_bit_add/rel_bad_fuel 0
+P acf/_esys_bus_bit_add/rel_avionics_fan 0
+P acf/_esys_bus_bit_add/rel_bad_fuel 1
 P acf/_esys_bus_bit_add/rel_bus0 1
 P acf/_esys_bus_bit_add/rel_bus1 0
 P acf/_esys_bus_bit_add/rel_bus2 0
@@ -28199,7 +28210,7 @@ P acf/_esys_bus_bit_add/rel_g_gia2 0
 P acf/_esys_bus_bit_add/rel_g_magmtr 0
 P acf/_esys_bus_bit_add/rel_gear_act 0
 P acf/_esys_bus_bit_add/rel_gen_esys 1
-P acf/_esys_bus_bit_add/rel_gps1 0
+P acf/_esys_bus_bit_add/rel_gps1 1
 P acf/_esys_bus_bit_add/rel_gps2 0
 P acf/_esys_bus_bit_add/rel_heatIN0 0
 P acf/_esys_bus_bit_add/rel_heatIN1 0
@@ -28232,16 +28243,16 @@ P acf/_esys_bus_bit_add/rel_lites_hud 0
 P acf/_esys_bus_bit_add/rel_lites_ins 1
 P acf/_esys_bus_bit_add/rel_lites_land 1
 P acf/_esys_bus_bit_add/rel_lites_nav 1
-P acf/_esys_bus_bit_add/rel_lites_pan 1
-P acf/_esys_bus_bit_add/rel_lites_strobe 1
-P acf/_esys_bus_bit_add/rel_lites_taxi 1
-P acf/_esys_bus_bit_add/rel_marker 0
+P acf/_esys_bus_bit_add/rel_lites_pan 0
+P acf/_esys_bus_bit_add/rel_lites_strobe 0
+P acf/_esys_bus_bit_add/rel_lites_taxi 0
+P acf/_esys_bus_bit_add/rel_marker 1
 P acf/_esys_bus_bit_add/rel_navcom1 1
-P acf/_esys_bus_bit_add/rel_navcom2 1
-P acf/_esys_bus_bit_add/rel_pil_tsi 0
+P acf/_esys_bus_bit_add/rel_navcom2 0
+P acf/_esys_bus_bit_add/rel_pil_tsi 1
 P acf/_esys_bus_bit_add/rel_rud_trim 0
 P acf/_esys_bus_bit_add/rel_servo_thro 0
-P acf/_esys_bus_bit_add/rel_slats 1
+P acf/_esys_bus_bit_add/rel_slats 0
 P acf/_esys_bus_bit_add/rel_stab_aug 0
 P acf/_esys_bus_bit_add/rel_stall_warn 0
 P acf/_esys_bus_bit_add/rel_startr0 1
@@ -28441,14 +28452,14 @@ P acf/_green_lo_gen_volt 26.0
 P acf/_green_lo_oilP 60.0
 P acf/_green_lo_oilT 0.0
 P acf/_green_lo_pwr 40.0
-P acf/_green_lo_vac 4.599999905
+P acf/_green_lo_vac 4.500000000
 P acf/_green_lo_xmsn_P 0.0
 P acf/_green_lo_xmsn_T 0.0
 P acf/_ground_pwr/0 0.0
 P acf/_ground_pwr/1 0.0
 P acf/_ground_pwr/2 0.0
 P acf/_ground_pwr/count 3
-P acf/_h_eqlbm 3.858917236
+P acf/_h_eqlbm 3.914889097
 P acf/_has_ADG 0
 P acf/_has_APU_bleed_air 0
 P acf/_has_APU_generator 0
@@ -28591,7 +28602,7 @@ P acf/_max_ITT 646.0
 P acf/_max_MP_limit 29.799999237
 P acf/_max_bat_amp 36.0
 P acf/_max_gen_amp0 60.0
-P acf/_max_gen_amp_per_gen/0 60.0
+P acf/_max_gen_amp_per_gen/0 160.0
 P acf/_max_gen_amp_per_gen/1 0.0
 P acf/_max_gen_amp_per_gen/2 0.0
 P acf/_max_gen_amp_per_gen/3 0.0
@@ -29151,7 +29162,7 @@ P acf/_tank_xyz_full/8,1 0.0
 P acf/_tank_xyz_full/8,2 0.0
 P acf/_tank_xyz_full/i_count 9
 P acf/_tank_xyz_full/j_count 3
-P acf/_the_eqlbm 3.449643135
+P acf/_the_eqlbm 5.596497059
 P acf/_thro_non_vect_props_at_sin_vect 0
 P acf/_thro_x_ctr 0.0
 P acf/_throt_max_fwd_emr 1.0
@@ -29386,6 +29397,22 @@ han_mixture_vern han_mixture_vernier
 
 han_primer han_primer.png
   POS 52.000000 -141.000000
+  DATAREF 
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+but_battery but_battery.png
+  POS 118.285713 -74.000000
+  DATAREF 
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+but_generator but_generator.png
+  POS 68.571426 -73.428566
   DATAREF 
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
