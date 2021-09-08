@@ -147,8 +147,13 @@ P _gear/0/_leg_len 2.296587944
 P _gear/0/_lonE 11.0
 P _gear/0/_lonN 11.0
 P _gear/0/_lonR 0.0
+<<<<<<< HEAD
 P _gear/0/_scon 3572.762451172
 P _gear/0/_stat_def 0.140350103
+=======
+P _gear/0/_scon 3036.847900391
+P _gear/0/_stat_def 0.170256078
+>>>>>>> 869f340c2973b7b57b260ab6af81dd940228e72d
 P _gear/0/_steerdeg_hispeed 10.0
 P _gear/0/_steerdeg_lospeed 42.0
 P _gear/0/_strut_comp 0.0
@@ -182,7 +187,11 @@ P _gear/1/_lonE 14.0
 P _gear/1/_lonN 14.0
 P _gear/1/_lonR 0.0
 P _gear/1/_scon 3572.762451172
+<<<<<<< HEAD
 P _gear/1/_stat_def 0.175309196
+=======
+P _gear/1/_stat_def 0.173137307
+>>>>>>> 869f340c2973b7b57b260ab6af81dd940228e72d
 P _gear/1/_steerdeg_hispeed 0.0
 P _gear/1/_steerdeg_lospeed 0.0
 P _gear/1/_strut_comp 0.0
@@ -216,7 +225,11 @@ P _gear/2/_lonE 14.0
 P _gear/2/_lonN 14.0
 P _gear/2/_lonR 0.0
 P _gear/2/_scon 3572.762451172
+<<<<<<< HEAD
 P _gear/2/_stat_def 0.175309196
+=======
+P _gear/2/_stat_def 0.173137307
+>>>>>>> 869f340c2973b7b57b260ab6af81dd940228e72d
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
@@ -321,6 +334,7 @@ P _obja/5/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/5/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/5/_v10_is_internal -1923574224
 P _obja/5/_v10_steers_with_gear 0
+<<<<<<< HEAD
 P _obja/6/_obj_flags 0
 P _obja/6/_v10_att_file_stl Landing_gear.obj
 P _obja/6/_v10_att_part -1
@@ -333,6 +347,9 @@ P _obja/6/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/6/_v10_is_internal -1113680336
 P _obja/6/_v10_steers_with_gear 0
 P _obja/count 7
+=======
+P _obja/count 6
+>>>>>>> 869f340c2973b7b57b260ab6af81dd940228e72d
 P _panel_inst_3d 11
 P _part/0/_bot_s1 0.0
 P _part/0/_bot_s2 0.0
