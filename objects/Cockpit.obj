@@ -3,7 +3,7 @@ I
 OBJ
 
 GLOBAL_cockpit_lit
-POINT_COUNTS	426	0	0	426
+POINT_COUNTS	468	0	0	468
 
 VT	-0.43398765	-0.42887649	-2.4761727	-0	-0	1	1	1
 VT	-0.43398765	-0.46484903	-2.4761727	-0	-0	1	1	0
@@ -11,6 +11,18 @@ VT	-0.44501445	-0.46484903	-2.4761727	-0	-0	1	0	0
 VT	-0.44501445	-0.42887649	-2.4761727	0	-0	1	0	1
 VT	-0.43398765	-0.42887649	-2.4761727	0	-0	1	1	1
 VT	-0.44501445	-0.46484903	-2.4761727	0	-0	1	0	0
+VT	-0.13758545	-0.43074578	-2.4748976	-0	-0	1	1	1
+VT	-0.13758545	-0.45465693	-2.4748976	-0	-0	1	1	0
+VT	-0.15190129	-0.45465693	-2.4748976	-0	-0	1	0	0
+VT	-0.15190129	-0.43074578	-2.4748976	0	-0	1	0	1
+VT	-0.13758545	-0.43074578	-2.4748976	0	-0	1	1	1
+VT	-0.15190129	-0.45465693	-2.4748976	0	-0	1	0	0
+VT	-0.13758545	-0.43074578	-2.4830441	0	0.99999994	-0	1	1
+VT	-0.13758545	-0.43074578	-2.4748976	0	0.99999994	-0	1	1
+VT	-0.15190129	-0.43074578	-2.4748976	0	0.99999994	-0	0	1
+VT	-0.15190129	-0.43074578	-2.4830441	-0	0.99999994	-0	0	1
+VT	-0.13758545	-0.43074578	-2.4830441	-0	0.99999994	-0	1	1
+VT	-0.15190129	-0.43074578	-2.4748976	-0	0.99999994	-0	0	1
 VT	-0.4226394	-0.42887649	-2.4761727	-0	-0	1	1	1
 VT	-0.4226394	-0.46484903	-2.4761727	-0	-0	1	1	0
 VT	-0.4336662	-0.46484903	-2.4761727	-0	-0	1	0	0
@@ -311,12 +323,42 @@ VT	-0.0061095832	-0.0061563132	0.0034606447	-0	-0.00000016	1	0	0
 VT	-0.0061095832	0.0058436869	0.0034606466	0	-0.00000016	1	0	1
 VT	0.0058904169	0.0058436869	0.0034606466	0	-0.00000016	1	1	1
 VT	-0.0061095832	-0.0061563132	0.0034606447	0	-0.00000016	1	0	0
-VT	0.48021001	-0.36694139	-2.4846017	-0	-0	1	1	1
-VT	0.48021001	-0.41298956	-2.4846017	-0	-0	1	1	0
-VT	0.36653596	-0.41298956	-2.4846017	-0	-0	1	0	0
-VT	0.36653596	-0.36694139	-2.4846017	0	-0	1	0	1
-VT	0.48021001	-0.36694139	-2.4846017	0	-0	1	1	1
-VT	0.36653596	-0.41298956	-2.4846017	0	-0	1	0	0
+VT	0.097887039	0.12812535	0.0063521056	-0	-0.00000021	0.99999994	1	1
+VT	0.097887039	0.082077205	0.0063520959	-0	-0.00000021	0.99999994	1	0
+VT	-0.095280424	0.082077205	0.0063520959	-0	-0.00000021	0.99999994	0	0
+VT	-0.095280424	0.12812535	0.0063521056	0	-0.00000021	0.99999994	0	1
+VT	0.097887039	0.12812535	0.0063521056	0	-0.00000021	0.99999994	1	1
+VT	-0.095280424	0.082077205	0.0063520959	0	-0.00000021	0.99999994	0	0
+VT	0.097887039	0.12811431	-0.0014643506	0	0.00000022	-1	1	1
+VT	-0.095280424	0.12811431	-0.0014643506	0	0.00000022	-1	0	1
+VT	-0.095280424	0.082066156	-0.0014643609	0	0.00000022	-1	0	0
+VT	0.097887039	0.082066156	-0.0014643609	0	0.00000022	-1	1	0
+VT	0.097887039	0.12811431	-0.0014643506	0	0.00000022	-1	1	1
+VT	-0.095280424	0.082066156	-0.0014643609	0	0.00000022	-1	0	0
+VT	-0.095280424	0.082066156	-0.0014643609	-1	0	-0	0	0
+VT	-0.095280424	0.12811431	-0.0014643506	-1	0	-0	0	1
+VT	-0.095280424	0.12812535	0.0063521056	-1	0	-0	0	1
+VT	-0.095280424	0.082077205	0.0063520959	-1	0	-0	0	0
+VT	-0.095280424	0.082066156	-0.0014643609	-1	0	-0	0	0
+VT	-0.095280424	0.12812535	0.0063521056	-1	0	-0	0	1
+VT	-0.095280424	0.12811431	-0.0014643506	-0	0.99999899	-0.0014126285	0	1
+VT	0.097887039	0.12811431	-0.0014643506	-0	0.99999899	-0.0014126285	1	1
+VT	0.097887039	0.12812535	0.0063521056	-0	0.99999899	-0.0014126285	1	1
+VT	-0.095280424	0.12812535	0.0063521056	0	0.99999899	-0.0014126285	0	1
+VT	-0.095280424	0.12811431	-0.0014643506	0	0.99999899	-0.0014126285	0	1
+VT	0.097887039	0.12812535	0.0063521056	0	0.99999899	-0.0014126285	1	1
+VT	0.097887039	0.082066156	-0.0014643609	-0	-0.99999899	0.0014135817	1	0
+VT	-0.095280424	0.082066156	-0.0014643609	-0	-0.99999899	0.0014135817	0	0
+VT	-0.095280424	0.082077205	0.0063520959	-0	-0.99999899	0.0014135817	0	0
+VT	0.097887039	0.082077205	0.0063520959	0	-0.99999899	0.0014135817	1	0
+VT	0.097887039	0.082066156	-0.0014643609	0	-0.99999899	0.0014135817	1	0
+VT	-0.095280424	0.082077205	0.0063520959	0	-0.99999899	0.0014135817	0	0
+VT	0.097887039	0.12811431	-0.0014643506	1	0	-0	1	1
+VT	0.097887039	0.082066156	-0.0014643609	1	0	-0	1	0
+VT	0.097887039	0.082077205	0.0063520959	1	0	-0	1	0
+VT	0.097887039	0.12812535	0.0063521056	1	0	-0	1	1
+VT	0.097887039	0.12811431	-0.0014643506	1	0	-0	1	1
+VT	0.097887039	0.082077205	0.0063520959	1	0	-0	1	0
 VT	0.010495939	0.014445975	0.013939576	0.30885482	0.95055711	0.032399632	0.89999998	1
 VT	-0.00000432	0.017857717	0.013939578	0.30885482	0.95055711	0.032399632	1	1
 VT	-0.00000432	0.019044666	-0.020883719	0.30885482	0.95055711	0.032399632	1	0.5
@@ -474,12 +516,18 @@ IDX10	380	381	382	383	384	385	386	387	388	389
 IDX10	390	391	392	393	394	395	396	397	398	399
 IDX10	400	401	402	403	404	405	406	407	408	409
 IDX10	410	411	412	413	414	415	416	417	418	419
-IDX	420
-IDX	421
-IDX	422
-IDX	423
-IDX	424
-IDX	425
+IDX10	420	421	422	423	424	425	426	427	428	429
+IDX10	430	431	432	433	434	435	436	437	438	439
+IDX10	440	441	442	443	444	445	446	447	448	449
+IDX10	450	451	452	453	454	455	456	457	458	459
+IDX	460
+IDX	461
+IDX	462
+IDX	463
+IDX	464
+IDX	465
+IDX	466
+IDX	467
 
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/flap_lever
@@ -508,9 +556,9 @@ IDX	425
 	ANIM_rotate_end
 		ATTR_draw_disable
 		ATTR_manip_command	down	sim/flight_controls/flaps_down	flaps_down
-		TRIS	12 24
+		TRIS	24 24
 		ATTR_manip_command	up	sim/flight_controls/flaps_up	flaps_up
-		TRIS	36 24
+		TRIS	48 24
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	sim/cockpit2/engine/actuators/mixture_ratio_all
@@ -519,7 +567,16 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_drag_xy	hand	-100	-100	0	1	0	0	sim/cockpit2/engine/actuators/mixture_ratio[0]		Mixture
-		TRIS	72 144
+		TRIS	84 144
+	ANIM_end
+	ANIM_begin
+	ANIM_trans	0.42207	-0.49506	-2.49001	0.42207	-0.49506	-2.49001
+	ANIM_rotate_begin	1	0	-0	ZlSimulation/C152/extras/drawer
+	ANIM_rotate_key	0	0
+	ANIM_rotate_key	1	90.636767
+	ANIM_rotate_end
+		ATTR_manip_command	hand	ZlSimulation/C152/extras/drawer_toggle	drawer
+		TRIS	318 36
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	sim/cockpit2/engine/actuators/throttle_ratio[0]
@@ -528,7 +585,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_drag_xy	hand	-80	-80	0	1	0	0	sim/cockpit2/engine/actuators/throttle_ratio[0]		throttle
-		TRIS	312 84
+		TRIS	354 84
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	sim/cockpit2/engine/actuators/carb_heat_ratio[0]
@@ -537,7 +594,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_drag_xy	hand	-30	-30	1	0	0	0	sim/cockpit2/engine/actuators/carb_heat_ratio[0]		carb_heat
-		TRIS	396 30
+		TRIS	438 30
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[9]
@@ -546,7 +603,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_10_toggle	circuit breaker 10
-		TRIS	294 6
+		TRIS	306 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[10]
@@ -555,7 +612,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_11_toggle	circuit breaker 11
-		TRIS	300 6
+		TRIS	312 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[5]
@@ -564,7 +621,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_6_toggle	circuit breaker 6
-		TRIS	270 6
+		TRIS	282 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[6]
@@ -573,7 +630,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_7_toggle	circuit breaker 7
-		TRIS	276 6
+		TRIS	288 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[7]
@@ -582,7 +639,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_8_toggle	circuit breaker 8
-		TRIS	282 6
+		TRIS	294 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[8]
@@ -591,7 +648,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_9_toggle	circuit breaker 9
-		TRIS	288 6
+		TRIS	300 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[0]
@@ -600,7 +657,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_1_toggle	circuit breaker 1
-		TRIS	264 6
+		TRIS	276 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[1]
@@ -609,7 +666,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_2_toggle	circuit breaker 2
-		TRIS	258 6
+		TRIS	270 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[2]
@@ -618,7 +675,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_3_toggle	circuit breaker 3
-		TRIS	252 6
+		TRIS	264 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[3]
@@ -627,7 +684,7 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_4_toggle	circuit breaker 4
-		TRIS	240 6
+		TRIS	252 6
 	ANIM_end
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/circuit_breakers_position[4]
@@ -636,19 +693,19 @@ IDX	425
 	ANIM_trans_end
 	ATTR_manip_none
 		ATTR_manip_command	button	ZLSimulation/C152/electrical/circuit_breaker_5_toggle	circuit breaker 5
-		TRIS	246 6
+		TRIS	258 6
 	ANIM_end
 	ATTR_manip_command_switch_up_down2	hand	sim/electrical/generator_1_toggle	alternator
 	TRIS	0 6
+	ATTR_manip_command_switch_up_down2	button	sim/lights/beacon_lights_toggle	BCN
+	TRIS	6 12
 	ATTR_manip_command_switch_up_down2	hand	sim/electrical/battery_1_toggle	battery
-	TRIS	6 6
+	TRIS	18 6
 	ATTR_manip_command_switch_up_down2	button	sim/lights/landing_01_light_tog	LDG_LT
-	TRIS	60 12
+	TRIS	72 12
 	ATTR_manip_command_switch_up_down2	button	sim/lights/nav_lights_toggle	Nav
-	TRIS	216 12
-	ATTR_manip_command_switch_up_down2	button	sim/ice/pitot_heat0_tog	Pitot_HT
 	TRIS	228 12
-	ATTR_manip_command	hand	ZlSimulation/C152/extras/drawer_toggle	drawer
-	TRIS	306 6
+	ATTR_manip_command_switch_up_down2	button	sim/ice/pitot_heat0_tog	Pitot_HT
+	TRIS	240 12
 
-# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.1.0-beta.1+101.20201117225215
+# Build with Blender 2.93.4 (build b'b7205031cec4'). Exported with XPlane2Blender 4.1.0-beta.1+101.20201117225215
