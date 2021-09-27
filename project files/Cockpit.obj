@@ -708,4 +708,4 @@ IDX	467
 	ATTR_manip_command_switch_up_down2	button	sim/ice/pitot_heat0_tog	Pitot_HT
 	TRIS	240 12
 
-# Build with Blender 2.93.4 (build b'b7205031cec4'). Exported with XPlane2Blender 4.1.0-beta.1+101.20201117225215
+# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.1.0-beta.1+101.20201117225215
