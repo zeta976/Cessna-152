@@ -46,6 +46,7 @@ drawer_value = 0
 --**                               FIND X-PLANE DATAREFS                             **--
 --*************************************************************************************--
 
+simDR_door_open = find_dataref("sim/cockpit2/switches/door_open")
 
 --*************************************************************************************--
 --**                                  FIND DATAREFS                                  **--
@@ -70,7 +71,7 @@ C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beaco
 C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number") --Dataref to hold fuel indication
 C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number") --Datref to hold fuel indication
 C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number") --Dataref to hold flap lever position
-C152_drawer               = deferred_dataref("ZlSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
+C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
 
 
 
@@ -82,9 +83,13 @@ C152_drawer               = deferred_dataref("ZlSimulation/C152/extras/drawer", 
 
 
 --*************************************************************************************--
---**                                  X-PLANE COMMANDS                               **--
+--**                                 FIND X-PLANE COMMANDS                               **--
 --*************************************************************************************--
 
+simCMD_open_door_1       = find_command("sim/flight_controls/door_open_1")
+simCMD_close_door_1      = find_command("sim/flight_controls/door_close_1")
+simCMD_open_door_2       = find_command("sim/flight_controls/door_open_2")
+simCMD_close_door_2      = find_command("sim/flight_controls/door_close_2")
 
 
 
@@ -254,6 +259,19 @@ function drawer_toggle_CMDhandler(phase, duration)
     end
 end
 
+function l_door_CMDhandler(phase,duration)
+    if phase == 0 then
+        simDR_door_open[0] = 1 - simDR_door_open[0]
+    end
+end
+
+function r_door_CMDhandler(phase, duration)
+    if phase == 0 then 
+        simDR_door_open[1] = 1 - simDR_door_open[1]
+    end
+end
+
+
 
 --*************************************************************************************--
 --**                              CREATE CUSTOM COMMANDS                             **--
@@ -271,7 +289,9 @@ C152CMD_CircuitBreaker_8_toggle  = deferred_command("ZLSimulation/C152/electrica
 C152CMD_CircuitBreaker_9_toggle  = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_9_toggle", "toggle circuit breaker 9", circuit_breaker_9_CMDhandler)
 C152CMD_CircuitBreaker_10_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_10_toggle", "toggle circuit breaker 10", circuit_breaker_10_CMDhandler)
 C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_11_toggle", "toggle circuit breaker 11", circuit_breaker_11_CMDhandler)
-C152CMD_drawer_toggle            = deferred_command("ZlSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
+C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
+C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
+C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
 
 
 --*************************************************************************************--
@@ -315,7 +335,7 @@ function func_animate_slowly(reference_value, animated_VALUE, anim_speed)
     return animated_VALUE
 end
 function animate_drawer()
-    C152_drawer = func_animate_slowly(drawer_value, C152_drawer, 0.2)
+    C152_drawer = func_animate_slowly(drawer_value, C152_drawer, 2)
 end
 
 

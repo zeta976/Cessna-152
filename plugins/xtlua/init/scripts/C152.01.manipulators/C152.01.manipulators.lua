@@ -41,7 +41,9 @@ C152CMD_CircuitBreaker_8_toggle  = deferred_command("ZLSimulation/C152/electrica
 C152CMD_CircuitBreaker_9_toggle  = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_9_toggle", "toggle circuit breaker 9", circuit_breaker_9_CMDhandler)
 C152CMD_CircuitBreaker_10_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_10_toggle", "toggle circuit breaker 10", circuit_breaker_10_CMDhandler)
 C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_11_toggle", "toggle circuit breaker 11", circuit_breaker_11_CMDhandler)
-C152CMD_drawer_toggle            = deferred_command("ZlSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
+C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
+C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
+C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
 
 
 --*************************************************************************************--
@@ -55,4 +57,4 @@ C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beaco
 C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number")
 C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number")
 C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number")
-C152_drawer               = deferred_dataref("ZlSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
+C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
