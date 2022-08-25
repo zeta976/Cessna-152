@@ -148,7 +148,7 @@ P _gear/0/_lonE 11.0
 P _gear/0/_lonN 11.0
 P _gear/0/_lonR 0.0
 P _gear/0/_scon 3572.762451172
-P _gear/0/_stat_def 0.155652136
+P _gear/0/_stat_def 0.155652091
 P _gear/0/_steerdeg_hispeed 42.0
 P _gear/0/_steerdeg_lospeed 42.0
 P _gear/0/_strut_comp 0.0
@@ -255,7 +255,7 @@ P _lite/0/_width 20.0
 P _lite/count 1
 P _lite_equip/_land_lite_off_on_retract_EQ 0
 P _lite_equip/_taxi_lite_off_on_retract_EQ 0
-P _obja/0/_obj_flags 28
+P _obja/0/_obj_flags 20
 P _obja/0/_v10_att_file_stl lights.obj
 P _obja/0/_v10_att_part -1
 P _obja/0/_v10_att_phi_ref 0.0
@@ -277,6 +277,17 @@ P _obja/1/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/1/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/1/_v10_is_internal -1739352528
 P _obja/1/_v10_steers_with_gear 0
+P _obja/10/_obj_flags 13
+P _obja/10/_v10_att_file_stl int_lights.obj
+P _obja/10/_v10_att_part -1
+P _obja/10/_v10_att_phi_ref 0.0
+P _obja/10/_v10_att_psi_ref 0.0
+P _obja/10/_v10_att_the_ref 0.0
+P _obja/10/_v10_att_x_acf_prt_ref 0.0
+P _obja/10/_v10_att_y_acf_prt_ref 0.688976347
+P _obja/10/_v10_att_z_acf_prt_ref 13.188976288
+P _obja/10/_v10_is_internal -1615555024
+P _obja/10/_v10_steers_with_gear 0
 P _obja/2/_obj_flags 13
 P _obja/2/_v10_att_file_stl Interior1.obj
 P _obja/2/_v10_att_part -1
@@ -354,7 +365,18 @@ P _obja/8/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/8/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/8/_v10_is_internal -45836752
 P _obja/8/_v10_steers_with_gear 0
-P _obja/count 9
+P _obja/9/_obj_flags 13
+P _obja/9/_v10_att_file_stl Radios.obj
+P _obja/9/_v10_att_part -1
+P _obja/9/_v10_att_phi_ref 0.0
+P _obja/9/_v10_att_psi_ref 0.0
+P _obja/9/_v10_att_the_ref 0.0
+P _obja/9/_v10_att_x_acf_prt_ref 0.0
+P _obja/9/_v10_att_y_acf_prt_ref 0.688976347
+P _obja/9/_v10_att_z_acf_prt_ref 13.188976288
+P _obja/9/_v10_is_internal 985765424
+P _obja/9/_v10_steers_with_gear 0
+P _obja/count 11
 P _panel_inst_3d 11
 P _part/0/_bot_s1 0.0
 P _part/0/_bot_s2 0.0
@@ -29456,6 +29478,15 @@ ins_VOR1 VOR_1.png
   POS 196.000000 578.000000
   DATAREF 
   SIZE 1.500000
+  LIGHT_MODE MECHANICAL
+  LIGHT_RHEOSTAT 0
+  KEY_FRAME 0.000000 0.000000 1.000000
+  KEY_FRAME 1.000000 1.000000
+
+rad_navcom1_ff_GA rad_NAVCOM1_FF_GA.p
+  POS 679.000000 267.500000
+  DATAREF 
+  SIZE 3.000000
   LIGHT_MODE MECHANICAL
   LIGHT_RHEOSTAT 0
   KEY_FRAME 0.000000 0.000000 1.000000

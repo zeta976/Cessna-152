@@ -44,17 +44,19 @@ C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrica
 C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
-
+C152CMD_window_1_toggle          = deferred_command("ZLSimulation/C152/extras/window_1_toggle", "toggle window 1", window_1_toggle_CMDhandler)
+C152CMD_window_2_toggle          = deferred_command("ZLSimulation/C152/extras/window_2_toggle", "toggle window 2", window_2_toggle_CMDhandler)
 
 --*************************************************************************************--
 --**                             CREATE CUSTOM DATAREFS                              **--
 --*************************************************************************************--
 C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") --Dataref to hold alternator switch position
-C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]")
-C152_landing_light_switch = deferred_dataref("ZLSimulation/C152/electrical/landing_light_switch", "number")
-C152_pitot_heat_switch    = deferred_dataref("ZLSimulation/C152/electrical/pitot_heat_switch", "number")
-C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beacon_light_switch", "number")
-C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number")
-C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number")
-C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number")
+C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") -- Dataref to hold circuit breaker position
+C152_landing_light_switch = deferred_dataref("ZLSimulation/C152/electrical/landing_light_switch", "number") --Dataref to hold landing light switch position
+C152_pitot_heat_switch    = deferred_dataref("ZLSimulation/C152/electrical/pitot_heat_switch", "number") -- Dataref to hold pitot heat switch position
+C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beacon_light_switch", "number") -- Dataref to hold beacon light switch position
+C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number") --Dataref to hold fuel indication
+C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number") --Datref to hold fuel indication
+C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number") --Dataref to hold flap lever position
 C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
+C152_windows_open         = deferred_dataref("ZLSimulation/C152/extras/windows_open", "array[2]") --Dataref to hold windows positions

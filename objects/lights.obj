@@ -5,6 +5,28 @@ OBJ
 GLOBAL_cockpit_lit
 POINT_COUNTS	0	0	0	0
 
+	ANIM_begin
+	ANIM_trans	0	0.71724999	3.3574901	0	0.71724999	3.3574901
+	ANIM_rotate_begin	0	1	-0	sim/flightmodel/controls/vstab1_rud1def
+	ANIM_rotate_key	23	20.572622
+	ANIM_rotate_key	0	0
+	ANIM_rotate_key	-23	-20.572622
+	ANIM_rotate_end
+	ANIM_rotate_begin	0	0	-1	sim/flightmodel/controls/vstab1_rud1def
+	ANIM_rotate_key	23	-10.515495
+	ANIM_rotate_key	0	0
+	ANIM_rotate_key	-23	10.515495
+	ANIM_rotate_end
+	ANIM_rotate_begin	1	0	-0	sim/flightmodel/controls/vstab1_rud1def
+	ANIM_rotate_key	23	25.931496
+	ANIM_rotate_key	0	27.845175
+	ANIM_rotate_key	-23	25.931496
+	ANIM_rotate_end
+		LIGHT_NAMED	airplane_nav_tail -0.00000005 0.98155224 0.25556323
+	ANIM_end
+	LIGHT_NAMED	airplane_beacon 0 1.6112331 3.4759583
+	LIGHT_PARAM	airplane_nav_right_size 5.8398824 0.52374566 -2.1114833 1 0
+	LIGHT_PARAM	airplane_nav_left_size -5.8415837 0.52374566 -2.1114833 1 0
 	LIGHT_PARAM	airplane_landing_core 0 -0.72178501 -3.814075 0 0 0 0 0.4
 	LIGHT_PARAM	airplane_landing_flare 0 -0.72178501 -3.814075 0 0 0 0 1
 	LIGHT_PARAM	airplane_landing_glow 0 -0.72178501 -3.814075 0 0 0 0 0.5
