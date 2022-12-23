@@ -67,6 +67,8 @@ C152_pitot_heat_switch    = find_dataref("ZLSimulation/C152/electrical/pitot_hea
 C152_beacon_light_switch  = find_dataref("ZLSimulation/C152/electrical/beacon_light_switch") 
 C152_fuel_indicator_left  = find_dataref("ZLSimulation/C152/electrical/fuel_indicator_L") 
 C152_fuel_indicator_right = find_dataref("ZLSimulation/C152/electrical/fuel_indicator_R") 
+C152_dome_light_sw        = find_dataref("ZLSimulation/C152/electrical/dome_light_sw") 
+C152_dome_light           = find_dataref("ZLSimulation/C152/electrical/dome_light") 
 C152_flap_lever           = find_dataref("ZLSimulation/C152/electrical/flap_lever")
 --*************************************************************************************--
 --**                              CUSTOM DATAREF HANDLERS                            **--
@@ -147,6 +149,13 @@ function circuit_breakers()
     --Circuit breaker 5 (flaps)
     if C152_circuit_breakers[4] == 1 then
         simDR_flap_lever = C152_flap_lever
+    end
+    
+    --Circuit breaker 7 (Nav/Dome)
+    if C152_circuit_breakers[6] == 1 then
+        C152_dome_light = C152_dome_light_sw
+    else
+        C152_dome_light = 0
     end
 
 end

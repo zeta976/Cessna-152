@@ -5,6 +5,6 @@ OBJ
 GLOBAL_cockpit_lit
 POINT_COUNTS	0	0	0	0
 
-	LIGHT_PARAM	airplane_panel_sp 0 0.49893415 -1.6421876 1 1 1 0 15 0 0 0 1
+	LIGHT_PARAM	airplane_panel_sp -0 -0.23611696 -2.3338685 1 1 1 0 1 0 0 0 1.0
 
 # Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.1.0-beta.1+101.20201117225215

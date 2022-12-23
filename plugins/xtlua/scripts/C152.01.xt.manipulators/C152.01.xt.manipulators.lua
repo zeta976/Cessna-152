@@ -72,6 +72,8 @@ C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beaco
 C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number") --Dataref to hold fuel indication
 C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number") --Datref to hold fuel indication
 C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number") --Dataref to hold flap lever position
+C152_dome_light_sw        = deferred_dataref("ZLSimulation/C152/electrical/dome_light_sw", "number") --Dome light switch
+C152_dome_light           = deferred_dataref("ZLSimulation/C152/electrical/dome_light", "number") --Dome light actual brightness
 C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
 C152_windows_open         = deferred_dataref("ZLSimulation/C152/extras/windows_open", "array[2]") --Dataref to hold windows positions
 
@@ -254,6 +256,13 @@ function circuit_breaker_11_CMDhandler(phase, duration)
     end
 end
 
+--Dome light
+function dome_light_tog_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_dome_light_sw = 1 - C152_dome_light_sw
+    end
+end
+
 --Drawer toggle
 function drawer_toggle_CMDhandler(phase, duration)
     if phase == 0 then 
@@ -276,13 +285,13 @@ end
 --Windows toggle
 function window_1_toggle_CMDhandler(phase, duration)
     if phase == 0 then
-        windows_value[1] = 1 - windows_value[0]
+        windows_value[0] = 1 - windows_value[0]
     end
 end
 
 function window_2_toggle_CMDhandler(phase, duration)
     if phase == 0 then
-        windows_value[2] = 1 - windows_value[1]
+        windows_value[1] = 1 - windows_value[1]
     end
 end
 
@@ -303,6 +312,7 @@ C152CMD_CircuitBreaker_8_toggle  = deferred_command("ZLSimulation/C152/electrica
 C152CMD_CircuitBreaker_9_toggle  = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_9_toggle", "toggle circuit breaker 9", circuit_breaker_9_CMDhandler)
 C152CMD_CircuitBreaker_10_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_10_toggle", "toggle circuit breaker 10", circuit_breaker_10_CMDhandler)
 C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_11_toggle", "toggle circuit breaker 11", circuit_breaker_11_CMDhandler)
+C152CMD_dome_light_toggle        = deferred_command("ZLSimulation/C152/electrical/dome_light_toggle", "toggle dome light", dome_light_tog_CMDhandler)
 C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
@@ -367,6 +377,8 @@ end
 
 function flight_start()
     print("XTLua flight start")
+    C152_dome_light_sw = 0
+    C152_dome_light = 0
 end
 --function aircraft_unload()
 
