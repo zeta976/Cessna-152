@@ -33,8 +33,8 @@ IN_REPLAY - evaluates to 0 if replay is off, 1 if replay mode is on
 --*************************************************************************************--
 --**                             CREATE GLOBAL VARIABLES                               **--
 --*************************************************************************************--
-kilograms_to_pounds = 2.2046
-flaps_divider       = 10/30
+
+
 
 --*************************************************************************************--
 --**                                  LOCAL VARIABLES                                **--
@@ -108,15 +108,15 @@ C152_flap_lever           = find_dataref("ZLSimulation/C152/electrical/flap_leve
 function circuit_breakers()
     -- Circuit breaker 1 (alternator)
     if C152_circuit_breakers[0] == 1 and C152_alternator_switch == 1 then
-        simDR_generator_on = 1
+        simDR_generator_on[0] = 1
     else
-        simDR_generator_on = 0
+        simDR_generator_on[0] = 0
     end
 
     --Circuit breaker 2 (fuel indicators)
     if C152_circuit_breakers[1] == 1 and simDR_battery_on == 1 then
-        C152_fuel_indicator_left = simDR_fuel_quantity[0] * kilograms_to_pounds
-        C152_fuel_indicator_right = simDR_fuel_quantity[1] * kilograms_to_pounds
+        C152_fuel_indicator_left = simDR_fuel_quantity[0]
+        C152_fuel_indicator_right = simDR_fuel_quantity[1]
     else
         C152_fuel_indicator_left = 0
         C152_fuel_indicator_right = 0
@@ -147,7 +147,7 @@ function circuit_breakers()
     end
 
     --Circuit breaker 5 (flaps)
-    if C152_circuit_breakers[4] == 1 then
+    if C152_circuit_breakers[4] == 1 and C152_flap_lever >= 0 then
         simDR_flap_lever = C152_flap_lever
     end
     

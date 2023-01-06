@@ -48028,21 +48028,21 @@ IDX	43475
 	ANIM_end
 	ANIM_begin
 	ANIM_trans	-0.39831999	-0.40079001	-2.4892299	-0.39831999	-0.40079001	-2.4892299
-	ANIM_rotate_begin	0	1	-0	sim/cockpit2/fuel/fuel_quantity[0]
+	ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/electrical/fuel_indicator_L
 	ANIM_rotate_key	0	-0
 	ANIM_rotate_key	8.165	-0
 	ANIM_rotate_key	16.329	-5.8304185
 	ANIM_rotate_key	24.493999	-9.1730542
 	ANIM_rotate_key	32.659	-10.96985
 	ANIM_rotate_end
-	ANIM_rotate_begin	0	0	-1	sim/cockpit2/fuel/fuel_quantity[0]
+	ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/electrical/fuel_indicator_L
 	ANIM_rotate_key	0	-39.177709
 	ANIM_rotate_key	8.165	-14.435099
 	ANIM_rotate_key	16.329	15.445223
 	ANIM_rotate_key	24.493999	30.948888
 	ANIM_rotate_key	32.659	38.643137
 	ANIM_rotate_end
-	ANIM_rotate_begin	1	0	-0	sim/cockpit2/fuel/fuel_quantity[0]
+	ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/electrical/fuel_indicator_L
 	ANIM_rotate_key	0	0
 	ANIM_rotate_key	8.165	0
 	ANIM_rotate_key	16.329	0.76604456
@@ -48053,7 +48053,7 @@ IDX	43475
 	ANIM_end
 	ANIM_begin
 	ANIM_trans	-0.34536001	-0.40079001	-2.4892299	-0.34536001	-0.40079001	-2.4892299
-	ANIM_rotate_begin	0	0	-1	sim/cockpit2/fuel/fuel_quantity[1]
+	ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/electrical/fuel_indicator_R
 	ANIM_rotate_key	0	-38.941651
 	ANIM_rotate_key	8.165	-11.619012
 	ANIM_rotate_key	16.329	14.598392

@@ -1,5 +1,5 @@
 --[[ 
-Copyright Alejandro Zuluaga 2021. All rights reserved
+Copyright Alejandro Zuluaga 2021-2023. All rights reserved
 
 This file and its contents are suplied under the terms of the
 Creative Commons Attribution 4.0 International Public License (CC BY-NC 4.0)
@@ -40,8 +40,9 @@ IN_REPLAY - evaluates to 0 if replay is off, 1 if replay mode is on
 --**                                  LOCAL VARIABLES                                **--
 --*************************************************************************************--
 
-drawer_value = 0
-windows_value = {0,0}
+drawer_target = 0
+window_l_target = 0
+window_r_target = 0
 
 --*************************************************************************************--
 --**                               FIND X-PLANE DATAREFS                             **--
@@ -75,7 +76,8 @@ C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_
 C152_dome_light_sw        = deferred_dataref("ZLSimulation/C152/electrical/dome_light_sw", "number") --Dome light switch
 C152_dome_light           = deferred_dataref("ZLSimulation/C152/electrical/dome_light", "number") --Dome light actual brightness
 C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
-C152_windows_open         = deferred_dataref("ZLSimulation/C152/extras/windows_open", "array[2]") --Dataref to hold windows positions
+C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_open", "number") --Datarefs to hold windows positions
+C152_window_r_open        = deferred_dataref("ZLSimulation/C152/extras/window_r_open", "number")
 
 
 
@@ -178,12 +180,12 @@ end
 --Flap command handlers
 
 function flaps_up_CMDhandler(phase, duration)
-    if phase == 0 and C152_flap_lever ~= 0 then
+    if phase == 0 and C152_flap_lever > 0.33 then
         C152_flap_lever = C152_flap_lever - (10/30)
     end
 end
 function flaps_dn_CMDhandler(phase,duration)
-    if phase == 0 and C152_flap_lever ~= 1 then
+    if phase == 0 and C152_flap_lever < 1.0 then
         C152_flap_lever = C152_flap_lever + (10/30)
     end
 end
@@ -266,7 +268,7 @@ end
 --Drawer toggle
 function drawer_toggle_CMDhandler(phase, duration)
     if phase == 0 then 
-        drawer_value = 1 - drawer_value
+        drawer_target = 1 - drawer_target
     end
 end
 
@@ -283,15 +285,15 @@ function r_door_CMDhandler(phase, duration)
 end
 
 --Windows toggle
-function window_1_toggle_CMDhandler(phase, duration)
+function window_l_toggle_CMDhandler(phase, duration)
     if phase == 0 then
-        windows_value[0] = 1 - windows_value[0]
+        window_l_target = 1 - window_l_target
     end
 end
 
-function window_2_toggle_CMDhandler(phase, duration)
+function window_r_toggle_CMDhandler(phase, duration)
     if phase == 0 then
-        windows_value[1] = 1 - windows_value[1]
+        window_r_target = 1 - window_r_target
     end
 end
 
@@ -316,8 +318,8 @@ C152CMD_dome_light_toggle        = deferred_command("ZLSimulation/C152/electrica
 C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
-C152CMD_window_1_toggle          = deferred_command("ZLSimulation/C152/extras/window_1_toggle", "toggle window 1", window_1_toggle_CMDhandler)
-C152CMD_window_2_toggle          = deferred_command("ZLSimulation/C152/extras/window_2_toggle", "toggle window 2", window_2_toggle_CMDhandler)
+C152CMD_window_l_toggle          = deferred_command("ZLSimulation/C152/extras/window_l_toggle", "toggle left window", window_l_toggle_CMDhandler)
+C152CMD_window_r_toggle          = deferred_command("ZLSimulation/C152/extras/window_r_toggle", "toggle right window", window_r_toggle_CMDhandler)
 
 
 --*************************************************************************************--
@@ -355,17 +357,32 @@ simCMD_flaps_down                  = replace_command("sim/flight_controls/flaps_
 --*************************************************************************************--
 --**                                       CODE                                      **--
 --*************************************************************************************--
+function C152_set_animation_position(current_value, target, min, max, speed)
+
+    local fps_factor = math.min(1.0, speed * SIM_PERIOD)
+
+    if target >= (max - 0.001) and current_value >= (max - 0.01) then
+        return max
+    elseif target <= (min + 0.001) and current_value <= (min + 0.01) then
+       return min
+    else
+        return current_value + ((target - current_value) * fps_factor)
+    end
+
+end
+
 function func_animate_slowly(reference_value, animated_VALUE, anim_speed)
-    if math.abs(reference_value - animated_VALUE) < 0.01 then return reference_value end
+    if math.abs(reference_value - animated_VALUE) < 0.005 then return reference_value end
     animated_VALUE = animated_VALUE + ((reference_value - animated_VALUE) * (anim_speed * SIM_PERIOD))
     return animated_VALUE
 end
+
 function animate_drawer()
-    C152_drawer = func_animate_slowly(drawer_value, C152_drawer, 2.5)
+    C152_drawer = C152_set_animation_position(C152_drawer, drawer_target, 0.0, 1.0, 4)
 end
 function animate_windows()
-    C152_windows_open[0] = func_animate_slowly(windows_value[1], C152_windows_open[0], 4)
-    C152_windows_open[1] = func_animate_slowly(windows_value[2], C152_windows_open[1], 4)
+    C152_window_l_open = C152_set_animation_position(C152_window_l_open, window_l_target, 0.0, 1.0, 3.5)
+    C152_window_r_open = C152_set_animation_position(C152_window_r_open, window_r_target, 0.0, 1.0, 3.5)
 end
 
 

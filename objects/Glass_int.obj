@@ -5,8 +5,6 @@ OBJ
 GLOBAL_cockpit_lit
 TEXTURE	glass2.png
 TEXTURE_NORMAL	glass2_NRM.png
-NORMAL_METALNESS
-GLOBAL_specular	1
 BLEND_GLASS
 POINT_COUNTS	4230	0	0	4230
 
@@ -4682,21 +4680,22 @@ IDX10	4220	4221	4222	4223	4224	4225	4226	4227	4228	4229
 		ANIM_begin
 		ANIM_trans	-0.00728	0.52851999	0.46342999	-0.00728	0.52851999	0.46342999
 		ANIM_rotate	1	0	0	-3.8731947	-3.8731947
-		ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/extras/windows_open[1]
+		ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/extras/window_r_open
 		ANIM_rotate_key	0	-1.4180705
 		ANIM_rotate_key	0.5	-1.4180705
 		ANIM_rotate_key	1	-1.1556558
 		ANIM_rotate_end
-		ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/extras/windows_open[1]
+		ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/extras/window_r_open
 		ANIM_rotate_key	0	0
 		ANIM_rotate_key	0.5	0
 		ANIM_rotate_key	1	-11.997163
 		ANIM_rotate_end
-		ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/windows_open[1]
+		ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/window_r_open
 		ANIM_rotate_key	0	-1.23587
 		ANIM_rotate_key	0.5	-1.23587
 		ANIM_rotate_key	1	-1.263372
 		ANIM_rotate_end
+			ATTR_shiny_rat	0.5
 			TRIS	66 192
 		ANIM_end
 	ANIM_end
@@ -4717,17 +4716,17 @@ IDX10	4220	4221	4222	4223	4224	4225	4226	4227	4228	4229
 		ANIM_begin
 		ANIM_trans	0.00728	0.52851999	0.46342999	0.00728	0.52851999	0.46342999
 		ANIM_rotate	1	0	0	-3.8731947	-3.8731947
-		ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/extras/windows_open[0]
+		ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/extras/window_l_open
 		ANIM_rotate_key	0	1.4180705
 		ANIM_rotate_key	0.5	1.4180705
 		ANIM_rotate_key	1	1.1556558
 		ANIM_rotate_end
-		ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/extras/windows_open[0]
+		ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/extras/window_l_open
 		ANIM_rotate_key	0	0
 		ANIM_rotate_key	0.5	0
 		ANIM_rotate_key	1	11.997163
 		ANIM_rotate_end
-		ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/windows_open[0]
+		ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/window_l_open
 		ANIM_rotate_key	0	-1.23587
 		ANIM_rotate_key	0.5	-1.23587
 		ANIM_rotate_key	1	-1.263372

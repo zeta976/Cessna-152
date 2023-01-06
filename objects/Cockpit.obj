@@ -2740,17 +2740,17 @@ IDX	2435
 		ANIM_begin
 		ANIM_trans	0.00728	0.52851999	0.46342999	0.00728	0.52851999	0.46342999
 		ANIM_rotate	1	0	0	-3.8731947	-3.8731947
-		ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/extras/windows_open[0]
+		ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/extras/window_l_open
 		ANIM_rotate_key	0	1.4180705
 		ANIM_rotate_key	0.5	1.4180705
 		ANIM_rotate_key	1	1.1556558
 		ANIM_rotate_end
-		ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/extras/windows_open[0]
+		ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/extras/window_l_open
 		ANIM_rotate_key	0	0
 		ANIM_rotate_key	0.5	0
 		ANIM_rotate_key	1	11.997163
 		ANIM_rotate_end
-		ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/windows_open[0]
+		ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/window_l_open
 		ANIM_rotate_key	0	-1.23587
 		ANIM_rotate_key	0.5	-1.23587
 		ANIM_rotate_key	1	-1.263372
@@ -2760,12 +2760,12 @@ IDX	2435
 			ANIM_rotate	0	1	0	-1.4180705	-1.4180705
 			ANIM_rotate	0	0	-1	0.030366763	0.030366763
 			ANIM_rotate	1	0	0	1.235297	1.235297
-			ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/windows_open[0]
+			ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/window_l_open
 			ANIM_rotate_key	0	0
 			ANIM_rotate_key	0.5	85.00001
 			ANIM_rotate_key	1	85.00001
 			ANIM_rotate_end
-				ATTR_manip_command	hand	ZLSimulation/C152/extras/window_1_toggle	Toggle left window
+				ATTR_manip_command	hand	ZLSimulation/C152/extras/window_l_toggle	Toggle left window
 				TRIS	72 66
 			ANIM_end
 		ANIM_end
@@ -2789,17 +2789,17 @@ IDX	2435
 		ANIM_begin
 		ANIM_trans	-0.00728	0.52851999	0.46342999	-0.00728	0.52851999	0.46342999
 		ANIM_rotate	1	0	0	-3.8731947	-3.8731947
-		ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/extras/windows_open[1]
+		ANIM_rotate_begin	0	1	-0	ZLSimulation/C152/extras/window_r_open
 		ANIM_rotate_key	0	-1.4180705
 		ANIM_rotate_key	0.5	-1.4180705
 		ANIM_rotate_key	1	-1.1556558
 		ANIM_rotate_end
-		ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/extras/windows_open[1]
+		ANIM_rotate_begin	0	0	-1	ZLSimulation/C152/extras/window_r_open
 		ANIM_rotate_key	0	0
 		ANIM_rotate_key	0.5	0
 		ANIM_rotate_key	1	-11.997163
 		ANIM_rotate_end
-		ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/windows_open[1]
+		ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/window_r_open
 		ANIM_rotate_key	0	-1.23587
 		ANIM_rotate_key	0.5	-1.23587
 		ANIM_rotate_key	1	-1.263372
@@ -2809,12 +2809,12 @@ IDX	2435
 			ANIM_rotate	0	1	0	1.4180705	1.4180705
 			ANIM_rotate	0	0	-1	-0.030366763	-0.030366763
 			ANIM_rotate	1	0	0	1.235297	1.235297
-			ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/windows_open[1]
+			ANIM_rotate_begin	1	0	-0	ZLSimulation/C152/extras/window_r_open
 			ANIM_rotate_key	0	0
 			ANIM_rotate_key	0.5	85.00001
 			ANIM_rotate_key	1	85.00001
 			ANIM_rotate_end
-				ATTR_manip_command	hand	ZLSimulation/C152/extras/window_2_toggle	Toggle right window
+				ATTR_manip_command	hand	ZLSimulation/C152/extras/window_r_toggle	Toggle right window
 				TRIS	138 66
 			ANIM_end
 		ANIM_end
@@ -2830,11 +2830,11 @@ IDX	2435
 		TRIS	204 66
 	ANIM_end
 	ANIM_begin
-	ANIM_trans_begin	sim/cockpit2/engine/actuators/primer_ratio
+	ANIM_trans_begin	sim/cockpit2/engine/actuators/primer_ratio[0]
 	ANIM_trans_key	1	-0.4869	-0.44521999	-2.4247501
 	ANIM_trans_key	0	-0.4869	-0.44521999	-2.4558699
 	ANIM_trans_end
-		ATTR_manip_drag_xy	hand	-30	-30	0	1	0	0	sim/cockpit2/engine/actuators/primer_ratio		primer
+		ATTR_manip_drag_xy	hand	-30	-30	0	1	0	0	sim/cockpit2/engine/actuators/primer_ratio[0]		primer
 		TRIS	342 66
 	ANIM_end
 	ANIM_begin
@@ -3070,11 +3070,11 @@ IDX	2435
 	TRIS	1920 66
 	ATTR_manip_command_knob	rotate_medium	sim/instruments/barometer_up	sim/instruments/barometer_down	Baro adjust
 	TRIS	1986 66
-	ATTR_manip_command_knob	rotate_medium	sim/radios/obs1_up	sim/radios/obs1_down	obsadj
+	ATTR_manip_command_knob	rotate_medium	sim/radios/obs_HSI_up	sim/radios/obs_HSI_down	obsadj
 	TRIS	2052 66
 	ATTR_manip_command_knob	rotate_medium	sim/operation/time_up	sim/operation/time_down	clock_adj
 	TRIS	2118 66
-	ATTR_manip_command_knob	rotate_medium	sim/radios/copilot_obs1_up	sim/radios/copilot_obs1_down	obs2adj
+	ATTR_manip_command_knob	rotate_medium	sim/radios/copilot_obs_HSI_up	sim/radios/copilot_obs_HSI_down	obs2adj
 	TRIS	2184 66
 	ATTR_manip_axis_knob	rotate_small	0	1	0.1	0	sim/cockpit2/radios/actuators/audio_volume_nav1	Nav volume up/dn
 	TRIS	2250 66

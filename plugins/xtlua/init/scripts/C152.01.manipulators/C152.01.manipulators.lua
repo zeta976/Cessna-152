@@ -45,8 +45,8 @@ C152CMD_dome_light_toggle        = deferred_command("ZLSimulation/C152/electrica
 C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
-C152CMD_window_1_toggle          = deferred_command("ZLSimulation/C152/extras/window_1_toggle", "toggle window 1", window_1_toggle_CMDhandler)
-C152CMD_window_2_toggle          = deferred_command("ZLSimulation/C152/extras/window_2_toggle", "toggle window 2", window_2_toggle_CMDhandler)
+C152CMD_window_l_toggle          = deferred_command("ZLSimulation/C152/extras/window_l_toggle", "toggle left window", window_l_toggle_CMDhandler)
+C152CMD_window_r_toggle          = deferred_command("ZLSimulation/C152/extras/window_r_toggle", "toggle right window", window_r_toggle_CMDhandler)
 
 --*************************************************************************************--
 --**                             CREATE CUSTOM DATAREFS                              **--
@@ -62,4 +62,6 @@ C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_
 C152_dome_light_sw        = deferred_dataref("ZLSimulation/C152/electrical/dome_light_sw", "number") --Dome light switch
 C152_dome_light           = deferred_dataref("ZLSimulation/C152/electrical/dome_light", "number") --Dome light actual brightness
 C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
-C152_windows_open         = deferred_dataref("ZLSimulation/C152/extras/windows_open", "array[2]") --Dataref to hold windows positions
+C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_open", "number") --Datarefs to hold windows positions
+C152_window_r_open        = deferred_dataref("ZLSimulation/C152/extras/window_r_open", "number")
+

@@ -148,7 +148,7 @@ P _gear/0/_lonE 11.0
 P _gear/0/_lonN 11.0
 P _gear/0/_lonR 0.0
 P _gear/0/_scon 3572.762451172
-P _gear/0/_stat_def 0.155651823
+P _gear/0/_stat_def 0.155651808
 P _gear/0/_steerdeg_hispeed 42.0
 P _gear/0/_steerdeg_lospeed 42.0
 P _gear/0/_strut_comp 0.0
@@ -182,7 +182,7 @@ P _gear/1/_lonE 9.0
 P _gear/1/_lonN 9.0
 P _gear/1/_lonR 0.0
 P _gear/1/_scon 3572.762451172
-P _gear/1/_stat_def 0.167667642
+P _gear/1/_stat_def 0.167667612
 P _gear/1/_steerdeg_hispeed 0.0
 P _gear/1/_steerdeg_lospeed 0.0
 P _gear/1/_strut_comp 0.0
@@ -216,7 +216,7 @@ P _gear/2/_lonE 9.0
 P _gear/2/_lonN 9.0
 P _gear/2/_lonR 0.0
 P _gear/2/_scon 3572.762451172
-P _gear/2/_stat_def 0.167667642
+P _gear/2/_stat_def 0.167667612
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
