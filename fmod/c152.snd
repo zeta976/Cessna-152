@@ -1,0 +1,45 @@
+﻿A
+1000
+ACF_SOUNDS
+
+BEGIN_SOUND_SPACE
+	SOUND_INDEX 0
+	BLEND_DEPTH 0.03
+	SPHERE 0.0000 0.0000 0.0000 5.0
+END_SOUND_SPACE
+
+#################
+# LIGHT SWITCHES
+#################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/lights/beacon_lights_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/lights/landing_01_light_tog
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/lights/nav_lights_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/ice/pitot_heat0_tog
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /engine
+	VEH_PART engine 0
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] < 1
+END_SOUND_ATTACHMENT
