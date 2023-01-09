@@ -182,7 +182,7 @@ P _gear/1/_lonE 9.0
 P _gear/1/_lonN 9.0
 P _gear/1/_lonR 0.0
 P _gear/1/_scon 3572.762451172
-P _gear/1/_stat_def 0.167667612
+P _gear/1/_stat_def 0.167667598
 P _gear/1/_steerdeg_hispeed 0.0
 P _gear/1/_steerdeg_lospeed 0.0
 P _gear/1/_strut_comp 0.0
@@ -216,7 +216,7 @@ P _gear/2/_lonE 9.0
 P _gear/2/_lonN 9.0
 P _gear/2/_lonR 0.0
 P _gear/2/_scon 3572.762451172
-P _gear/2/_stat_def 0.167667612
+P _gear/2/_stat_def 0.167667598
 P _gear/2/_steerdeg_hispeed 0.0
 P _gear/2/_steerdeg_lospeed 0.0
 P _gear/2/_strut_comp 0.0
@@ -26214,9 +26214,9 @@ P acf/_Jxx_unitmass 0.0
 P acf/_Jyy_unitmass 0.0
 P acf/_Jzz_unitmass 0.0
 P acf/_Mmo 0.0
-P acf/_RSC_idlespeed_ENGN 760.0
+P acf/_RSC_idlespeed_ENGN 730.0
 P acf/_RSC_maxgreen_ENGN 2540.0
-P acf/_RSC_mingov_ENGN 750.0
+P acf/_RSC_mingov_ENGN 700.0
 P acf/_RSC_mingreen_ENGN 570.0
 P acf/_RSC_redline_ENGN 2550.0
 P acf/_SFC_ROC 0.010000000

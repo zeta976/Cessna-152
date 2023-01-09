@@ -48,7 +48,11 @@ window_r_target = 0
 --**                               FIND X-PLANE DATAREFS                             **--
 --*************************************************************************************--
 
-simDR_door_open = find_dataref("sim/cockpit2/switches/door_open")
+simDR_door_open        = find_dataref("sim/cockpit2/switches/door_open")
+simDR_transponder_code = find_dataref("sim/cockpit2/radios/actuators/transponder_code")
+simDR_transponder_mode = find_dataref("sim/cockpit2/radios/actuators/transponder_mode")
+simDR_volume_com2      = find_dataref("sim/cockpit2/radios/actuators/audio_volume_com2")
+simDR_volume_nav2      = find_dataref("sim/cockpit2/radios/actuators/audio_volume_nav2")
 
 --*************************************************************************************--
 --**                                  FIND DATAREFS                                  **--
@@ -65,18 +69,34 @@ simDR_door_open = find_dataref("sim/cockpit2/switches/door_open")
 --**                              CREATE CUSTOM DATAREFS                             **--
 --*************************************************************************************--
 
-C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") --Dataref to hold alternator switch position
-C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") -- Dataref to hold circuit breaker position
-C152_landing_light_switch = deferred_dataref("ZLSimulation/C152/electrical/landing_light_switch", "number") --Dataref to hold landing light switch position
-C152_pitot_heat_switch    = deferred_dataref("ZLSimulation/C152/electrical/pitot_heat_switch", "number") -- Dataref to hold pitot heat switch position
-C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beacon_light_switch", "number") -- Dataref to hold beacon light switch position
-C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number") --Dataref to hold fuel indication
-C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number") --Datref to hold fuel indication
-C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number") --Dataref to hold flap lever position
-C152_dome_light_sw        = deferred_dataref("ZLSimulation/C152/electrical/dome_light_sw", "number") --Dome light switch
-C152_dome_light           = deferred_dataref("ZLSimulation/C152/electrical/dome_light", "number") --Dome light actual brightness
-C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
-C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_open", "number") --Datarefs to hold windows positions
+C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") -- Alternator
+C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") --Circuit Breakers
+
+-- Switch Panel
+
+C152_landing_light_switch = deferred_dataref("ZLSimulation/C152/electrical/landing_light_switch", "number") 
+C152_pitot_heat_switch    = deferred_dataref("ZLSimulation/C152/electrical/pitot_heat_switch", "number")
+C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beacon_light_switch", "number")
+C152_nav_light_switch	  = deferred_dataref("ZLSimulation/C152/electrical/nav_lights_switch", "number")
+C152_dome_light_sw        = deferred_dataref("ZLSimulation/C152/electrical/dome_light_sw", "number")
+
+-- Fuel Ind
+
+C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number")
+C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number")
+C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number")
+
+-- Transponder
+
+C152_transponder_thousands = deferred_dataref("ZLSimulation/C152/radios/transponder_thousands", "number")
+C152_transponder_hundreds = deferred_dataref("ZLSimulation/C152/radios/transponder_hundreds", "number")
+C152_transponder_tens = deferred_dataref("ZLSimulation/C152/radios/transponder_tens", "number")
+C152_transponder_ones = deferred_dataref("ZLSimulation/C152/radios/transponder_ones", "number")
+
+-- Anims
+
+C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number")
+C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_open", "number")
 C152_window_r_open        = deferred_dataref("ZLSimulation/C152/extras/window_r_open", "number")
 
 
@@ -140,6 +160,23 @@ function beacon_light_off_CMDhandler(phase, duration)
     end
 end
 
+-- Nav light command handlers
+function nav_light_toggle_CMDhandler(phase, duration)
+	if phase == 0 then
+		C152_nav_light_switch = 1 - C152_nav_light_switch
+	end
+end
+function nav_light_on_CMDhandler(phase, duration)
+	if phase == 0 then
+		C152_nav_light_switch = 1
+	end
+end
+function nav_light_off_CMDhandler(phase, duration)
+	if phase == 0 then
+		C152_nav_light_switch = 0
+	end
+end
+
 --landing light command handlers
 function landing_light_toggle_CMDhandler(phase, duration)
     if phase == 0 then
@@ -174,6 +211,13 @@ end
 function pitot_ht_off_CMDhandler(phase, duration)
     if phase == 0 then
         C152_pitot_heat_switch = 0 
+    end
+end
+
+--Dome light
+function dome_light_tog_CMDhandler(phase, duration)
+    if phase == 0 then
+        C152_dome_light_sw = 1 - C152_dome_light_sw
     end
 end
 
@@ -258,11 +302,122 @@ function circuit_breaker_11_CMDhandler(phase, duration)
     end
 end
 
---Dome light
-function dome_light_tog_CMDhandler(phase, duration)
-    if phase == 0 then
-        C152_dome_light_sw = 1 - C152_dome_light_sw
-    end
+-- Transponder Mode
+
+function transponder_up_CMDhandler(phase, duration)
+	if phase == 0 and simDR_transponder_mode <= 3 then
+		simDR_transponder_mode = simDR_transponder_mode + 1
+	end
+end
+
+-- Transponder Thousands
+
+function transponder_thousands_up_CMDhandler(phase, duration)
+	if phase == 0 then
+		if C152_transponder_thousands <= 6 then
+			C152_transponder_thousands = C152_transponder_thousands + 1
+		else
+			C152_transponder_thousands = 0
+		end
+	end
+end
+function transponder_thousands_dn_CMDhandler(phase, duration)
+	if phase == 0 then
+		if C152_transponder_thousands >= 1 then
+			C152_transponder_thousands = C152_transponder_thousands - 1
+		else
+			C152_transponder_thousands = 7
+		end
+	end
+end
+
+-- Transponder Hundreds
+
+function transponder_hundreds_up_CMDhandler(phase, duration)
+	if phase == 0 then
+		if C152_transponder_hundreds <= 6 then
+			C152_transponder_hundreds = C152_transponder_hundreds + 1
+		else
+			C152_transponder_hundreds = 0
+		end
+	end
+end
+function transponder_hundreds_dn_CMDhandler(phase, duration)
+	if phase == 0 then
+		if C152_transponder_hundreds >= 1 then
+			C152_transponder_hundreds = C152_transponder_hundreds - 1
+		else
+			C152_transponder_hundreds = 7
+		end
+	end
+end
+
+-- Transponder Tens
+
+function transponder_tens_up_CMDhandler(phase, duration)
+	if phase == 0 then
+		if C152_transponder_tens <= 6 then
+			C152_transponder_tens = C152_transponder_tens + 1
+		else
+			C152_transponder_tens = 0
+		end
+	end
+end
+function transponder_tens_dn_CMDhandler(phase, duration)
+	if phase == 0 then
+		if C152_transponder_tens >= 1 then
+			C152_transponder_tens = C152_transponder_tens - 1
+		else
+			C152_transponder_tens = 7
+		end
+	end
+end
+
+-- Transponder Ones
+
+function transponder_ones_up_CMDhandler(phase, duration)
+	if phase == 0 then
+		if C152_transponder_ones <= 6 then
+			C152_transponder_ones = C152_transponder_ones + 1
+		else
+			C152_transponder_ones = 0
+		end
+	end
+end
+function transponder_ones_dn_CMDhandler(phase, duration)
+	if phase == 0 then
+		if C152_transponder_ones >= 1 then
+			C152_transponder_ones = C152_transponder_ones - 1
+		else
+			C152_transponder_ones = 7
+		end
+	end
+end
+
+-- COM2 Volume
+
+function com2_volume_up_CMDhandler(phase, duration)
+	if phase == 0 and simDR_volume_com2 < 1 then
+		simDR_volume_com2 = simDR_volume_com2 + 0.1
+	end
+end
+function com2_volume_dn_CMDhandler(phase, duration)
+	if phase == 0 and simDR_volume_com2 < 0 then
+		simDR_volume_com2 = simDR_volume_com2 - 0.1
+	end
+end
+
+-- NAV2 Volume
+
+function nav2_volume_up_CMDhandler(phase, duration)
+	if phase == 0 and simDR_volume_nav2 < 1 then
+		simDR_volume_nav2 = simDR_volume_nav2 + 0.1
+	end
+end
+function nav2_volume_dn_CMDhandler(phase, duration)
+	if phase == 0 and simDR_volume_com2 < 0 then
+		simDR_volume_nav2 = simDR_volume_nav2 - 0.1
+	end
 end
 
 --Drawer toggle
@@ -315,6 +470,10 @@ C152CMD_CircuitBreaker_9_toggle  = deferred_command("ZLSimulation/C152/electrica
 C152CMD_CircuitBreaker_10_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_10_toggle", "toggle circuit breaker 10", circuit_breaker_10_CMDhandler)
 C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_11_toggle", "toggle circuit breaker 11", circuit_breaker_11_CMDhandler)
 C152CMD_dome_light_toggle        = deferred_command("ZLSimulation/C152/electrical/dome_light_toggle", "toggle dome light", dome_light_tog_CMDhandler)
+C152CMD_com2_volume_up           = deferred_command("ZLSimulation/C152/radios/com2_volume_up", "com2 volume up", com2_volume_up_CMDhandler)
+C152CMD_com2_volume_dn           = deferred_command("ZLSimulation/C152/radios/com2_volume_dn", "com2 volume down", com2_volume_dn_CMDhandler)
+C152CMD_nav2_volume_up           = deferred_command("ZLSimulation/C152/radios/nav2_volume_up", "nav2 volume up", nav2_volume_up_CMDhandler)
+C152CMD_nav2_volume_dn           = deferred_command("ZLSimulation/C152/radios/nav2_volume_dn", "com2 volume down", nav2_volume_dn_CMDhandler)
 C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
@@ -350,9 +509,25 @@ simdCMD_pitot_heat_toggle          = replace_command("sim/ice/pitot_heat0_tog", 
 simCMD_pitot_heat_on               = replace_command("sim/ice/pitot_heat0_on", pitot_ht_on_CMDhandler)
 simCMD_pitot_heat_off              = replace_command("sim/ice/pitot_heat0_off", pitot_ht_off_CMDhandler)
 
+--REPLACE NAV LIGHT COMMANDS
+simCMD_nav_lights_tog              = replace_command("sim/lights/nav_lights_toggle", nav_light_toggle_CMDhandler)
+simCMD_nav_lights_on               = replace_command("sim/lights/nav_lights_on", nav_light_on_CMDhandler)
+simCMD_nav_lights_off              = replace_command("sim/lights/nav_lights_off", nav_light_off_CMDhandler)
+
 --REPLACE FLAPS COMMANDS
 simCMD_flaps_up                    = replace_command("sim/flight_controls/flaps_up", flaps_up_CMDhandler)
 simCMD_flaps_down                  = replace_command("sim/flight_controls/flaps_down", flaps_dn_CMDhandler)
+
+--REPLACE TRANSPONDER COMMANDS
+simCMD_transponder_up              = replace_command("sim/transponder/transponder_up", transponder_up_CMDhandler)
+simCMD_transponder_thousands_up    = replace_command("sim/transponder/transponder_thousands_up", transponder_thousands_up_CMDhandler)
+simCMD_transponder_thousands_dn    = replace_command("sim/transponder/transponder_thousands_down", transponder_thousands_dn_CMDhandler)
+simCMD_transponder_hundreds_up     = replace_command("sim/transponder/transponder_hundreds_up", transponder_hundreds_up_CMDhandler)
+simCMD_transponder_hundreds_dn     = replace_command("sim/transponder/transponder_hundreds_down", transponder_hundreds_dn_CMDhandler)
+simCMD_transponder_tens_up         = replace_command("sim/transponder/transponder_tens_up", transponder_tens_up_CMDhandler)
+simCMD_transponder_tens_dn         = replace_command("sim/transponder/transponder_tens_down", transponder_tens_dn_CMDhandler)
+simCMD_transponder_ones_up         = replace_command("sim/transponder/transponder_ones_up", transponder_ones_up_CMDhandler)
+simCMD_transponder_ones_dn         = replace_command("sim/transponder/transponder_ones_down", transponder_ones_dn_CMDhandler)
 
 --*************************************************************************************--
 --**                                       CODE                                      **--
@@ -395,7 +570,6 @@ end
 function flight_start()
     print("XTLua flight start")
     C152_dome_light_sw = 0
-    C152_dome_light = 0
 end
 --function aircraft_unload()
 
@@ -406,6 +580,7 @@ end
 function after_physics()
     animate_drawer()
     animate_windows()
+	simDR_transponder_code = tonumber(C152_transponder_thousands..C152_transponder_hundreds..C152_transponder_tens..C152_transponder_ones)
 end
 
 

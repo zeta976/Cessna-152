@@ -1,5 +1,5 @@
 --[[ 
-Copyright Alejandro Zuluaga 2021. All rights reserved
+Copyright Alejandro Zuluaga 2021-2023. All rights reserved
 
 This file and its contents are suplied under the terms of the
 Creative Commons Attribution 4.0 International Public License (CC BY-NC 4.0)
@@ -47,7 +47,6 @@ IN_REPLAY - evaluates to 0 if replay is off, 1 if replay mode is on
 --*************************************************************************************--
 simDR_startup_running      = find_dataref("sim/operation/prefs/startup_running")
 simDR_battery_on           = find_dataref("sim/cockpit/electrical/battery_on")
-simDR_battery_array_on     = find_dataref("sim/cockpit/electrical/battery_on")
 simDR_generator_on         = find_dataref("sim/cockpit/electrical/generator_on")
 simDR_pitot_heat_on        = find_dataref("sim/cockpit/switches/pitot_heat_on")
 simDR_landing_lights_on    = find_dataref("sim/cockpit/electrical/landing_lights_on")
@@ -55,6 +54,8 @@ simDR_nav_lights_on        = find_dataref("sim/cockpit/electrical/nav_lights_on"
 simDR_beacon_lights_on     = find_dataref("sim/cockpit/electrical/beacon_lights_on")
 simDR_fuel_quantity        = find_dataref("sim/cockpit2/fuel/fuel_quantity")
 simDR_flap_lever           = find_dataref("sim/cockpit2/controls/flap_ratio")
+simDR_cockpit_brightness   = find_dataref("sim/cockpit/electrical/cockpit_lights")
+simDR_com2_pwr             = find_dataref("sim/cockpit2/radios/actuators/com2_power")
 
 
 --*************************************************************************************--
@@ -65,10 +66,10 @@ C152_circuit_breakers     = find_dataref("ZLSimulation/C152/electrical/circuit_b
 C152_landing_light_switch = find_dataref("ZLSimulation/C152/electrical/landing_light_switch")
 C152_pitot_heat_switch    = find_dataref("ZLSimulation/C152/electrical/pitot_heat_switch") 
 C152_beacon_light_switch  = find_dataref("ZLSimulation/C152/electrical/beacon_light_switch") 
+C152_nav_light_switch	  = find_dataref("ZLSimulation/C152/electrical/nav_lights_switch")
 C152_fuel_indicator_left  = find_dataref("ZLSimulation/C152/electrical/fuel_indicator_L") 
 C152_fuel_indicator_right = find_dataref("ZLSimulation/C152/electrical/fuel_indicator_R") 
-C152_dome_light_sw        = find_dataref("ZLSimulation/C152/electrical/dome_light_sw") 
-C152_dome_light           = find_dataref("ZLSimulation/C152/electrical/dome_light") 
+C152_dome_light_sw        = find_dataref("ZLSimulation/C152/electrical/dome_light_sw")
 C152_flap_lever           = find_dataref("ZLSimulation/C152/electrical/flap_lever")
 --*************************************************************************************--
 --**                              CUSTOM DATAREF HANDLERS                            **--
@@ -153,9 +154,15 @@ function circuit_breakers()
     
     --Circuit breaker 7 (Nav/Dome)
     if C152_circuit_breakers[6] == 1 then
-        C152_dome_light = C152_dome_light_sw
-    else
-        C152_dome_light = 0
+		if simDR_battery_on == 1 then
+			simDR_cockpit_brightness = C152_dome_light_sw
+		else
+			simDR_cockpit_brightness = 0.0
+		end
+		simDR_nav_lights_on = C152_nav_light_switch
+	else
+		simDR_nav_lights_on = 0
+		simDR_cockpit_brightness = 0
     end
 
 end
@@ -180,6 +187,7 @@ function flight_start()
         C152_beacon_light_switch = 0
         C152_alternator_switch = 0
         C152_pitot_heat_switch = 0
+		C152_nav_light_switch = 0
       --Startup running == 1
     elseif startup_running == 1 then
         C152_landing_light_switch = 1
@@ -187,8 +195,6 @@ function flight_start()
         C152_alternator_switch = 1
         C152_pitot_heat_switch = 1
     end
-        
-
 end
 
 --function aircraft_unload()

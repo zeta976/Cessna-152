@@ -42,6 +42,10 @@ C152CMD_CircuitBreaker_9_toggle  = deferred_command("ZLSimulation/C152/electrica
 C152CMD_CircuitBreaker_10_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_10_toggle", "toggle circuit breaker 10", circuit_breaker_10_CMDhandler)
 C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_11_toggle", "toggle circuit breaker 11", circuit_breaker_11_CMDhandler)
 C152CMD_dome_light_toggle        = deferred_command("ZLSimulation/C152/electrical/dome_light_toggle", "toggle dome light", dome_light_tog_CMDhandler)
+C152CMD_com2_volume_up           = deferred_command("ZLSimulation/C152/radios/com2_volume_up", "com2 volume up", com2_volume_up_CMDhandler)
+C152CMD_com2_volume_dn           = deferred_command("ZLSimulation/C152/radios/com2_volume_dn", "com2 volume down", com2_volume_dn_CMDhandler)
+C152CMD_nav2_volume_up           = deferred_command("ZLSimulation/C152/radios/nav2_volume_up", "nav2 volume up", nav2_volume_up_CMDhandler)
+C152CMD_nav2_volume_dn           = deferred_command("ZLSimulation/C152/radios/nav2_volume_dn", "com2 volume down", nav2_volume_dn_CMDhandler)
 C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
@@ -51,17 +55,32 @@ C152CMD_window_r_toggle          = deferred_command("ZLSimulation/C152/extras/wi
 --*************************************************************************************--
 --**                             CREATE CUSTOM DATAREFS                              **--
 --*************************************************************************************--
-C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") --Dataref to hold alternator switch position
-C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") -- Dataref to hold circuit breaker position
-C152_landing_light_switch = deferred_dataref("ZLSimulation/C152/electrical/landing_light_switch", "number") --Dataref to hold landing light switch position
-C152_pitot_heat_switch    = deferred_dataref("ZLSimulation/C152/electrical/pitot_heat_switch", "number") -- Dataref to hold pitot heat switch position
-C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beacon_light_switch", "number") -- Dataref to hold beacon light switch position
-C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number") --Dataref to hold fuel indication
-C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number") --Datref to hold fuel indication
-C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number") --Dataref to hold flap lever position
-C152_dome_light_sw        = deferred_dataref("ZLSimulation/C152/electrical/dome_light_sw", "number") --Dome light switch
-C152_dome_light           = deferred_dataref("ZLSimulation/C152/electrical/dome_light", "number") --Dome light actual brightness
-C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number") --Dataref to hold drawer positions
-C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_open", "number") --Datarefs to hold windows positions
-C152_window_r_open        = deferred_dataref("ZLSimulation/C152/extras/window_r_open", "number")
+C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") -- Alternator
+C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") --Circuit Breakers
 
+-- Switch Panel
+
+C152_landing_light_switch = deferred_dataref("ZLSimulation/C152/electrical/landing_light_switch", "number") 
+C152_pitot_heat_switch    = deferred_dataref("ZLSimulation/C152/electrical/pitot_heat_switch", "number")
+C152_beacon_light_switch  = deferred_dataref("ZLSimulation/C152/electrical/beacon_light_switch", "number")
+C152_nav_light_switch	  = deferred_dataref("ZLSimulation/C152/electrical/nav_lights_switch", "number")
+C152_dome_light_sw        = deferred_dataref("ZLSimulation/C152/electrical/dome_light_sw", "number")
+
+-- Fuel Ind
+
+C152_fuel_indicator_left  = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_L", "number")
+C152_fuel_indicator_right = deferred_dataref("ZLSimulation/C152/electrical/fuel_indicator_R", "number")
+C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_lever", "number")
+
+-- Transponder
+
+C152_transponder_thousands = deferred_dataref("ZLSimulation/C152/radios/transponder_thousands", "number")
+C152_transponder_hundreds = deferred_dataref("ZLSimulation/C152/radios/transponder_hundreds", "number")
+C152_transponder_tens = deferred_dataref("ZLSimulation/C152/radios/transponder_tens", "number")
+C152_transponder_ones = deferred_dataref("ZLSimulation/C152/radios/transponder_ones", "number")
+
+-- Anims
+
+C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number")
+C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_open", "number")
+C152_window_r_open        = deferred_dataref("ZLSimulation/C152/extras/window_r_open", "number")
