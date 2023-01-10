@@ -56,6 +56,7 @@ simDR_fuel_quantity        = find_dataref("sim/cockpit2/fuel/fuel_quantity")
 simDR_flap_lever           = find_dataref("sim/cockpit2/controls/flap_ratio")
 simDR_cockpit_brightness   = find_dataref("sim/cockpit/electrical/cockpit_lights")
 simDR_com2_pwr             = find_dataref("sim/cockpit2/radios/actuators/com2_power")
+simDR_hsi_copilot_src      = find_dataref("sim/cockpit2/radios/actuators/HSI_source_select_copilot")
 
 
 --*************************************************************************************--
@@ -181,6 +182,7 @@ function flight_start()
     end
     C152_pitot_heat_switch = 0
     C152_flap_lever = 0
+	simDR_hsi_copilot_src = 1
       --Startup running == 0
     if startup_running == 0 then
         C152_landing_light_switch = 0

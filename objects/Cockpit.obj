@@ -4010,7 +4010,7 @@ IDX10	3500	3501	3502	3503	3504	3505	3506	3507	3508	3509
 	ANIM_trans_key	1	-0.4869	-0.44521999	-2.4247501
 	ANIM_trans_key	0	-0.4869	-0.44521999	-2.4558699
 	ANIM_trans_end
-		ATTR_manip_drag_xy	hand	-30	-30	0	1	0	0	sim/cockpit2/engine/actuators/primer_ratio[0]		primer
+		ATTR_manip_command	hand	ZLSimulation/C152/engine/primer_toggle	primer_toggle
 		TRIS	342 66
 	ANIM_end
 	ANIM_begin

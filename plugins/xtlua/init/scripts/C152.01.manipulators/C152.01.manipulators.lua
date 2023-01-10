@@ -46,6 +46,7 @@ C152CMD_com2_volume_up           = deferred_command("ZLSimulation/C152/radios/co
 C152CMD_com2_volume_dn           = deferred_command("ZLSimulation/C152/radios/com2_volume_dn", "com2 volume down", com2_volume_dn_CMDhandler)
 C152CMD_nav2_volume_up           = deferred_command("ZLSimulation/C152/radios/nav2_volume_up", "nav2 volume up", nav2_volume_up_CMDhandler)
 C152CMD_nav2_volume_dn           = deferred_command("ZLSimulation/C152/radios/nav2_volume_dn", "com2 volume down", nav2_volume_dn_CMDhandler)
+C152CMD_primer_toggle            = deferred_command("ZLSimulation/C152/engine/primer_toggle", "toggle primer", toggle_primer_CMDhandler)
 C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)

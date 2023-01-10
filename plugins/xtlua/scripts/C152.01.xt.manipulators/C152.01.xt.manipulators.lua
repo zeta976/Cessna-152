@@ -40,6 +40,7 @@ IN_REPLAY - evaluates to 0 if replay is off, 1 if replay mode is on
 --**                                  LOCAL VARIABLES                                **--
 --*************************************************************************************--
 
+primer_target = 0
 drawer_target = 0
 window_l_target = 0
 window_r_target = 0
@@ -53,6 +54,7 @@ simDR_transponder_code = find_dataref("sim/cockpit2/radios/actuators/transponder
 simDR_transponder_mode = find_dataref("sim/cockpit2/radios/actuators/transponder_mode")
 simDR_volume_com2      = find_dataref("sim/cockpit2/radios/actuators/audio_volume_com2")
 simDR_volume_nav2      = find_dataref("sim/cockpit2/radios/actuators/audio_volume_nav2")
+simDR_primer_ratio     = find_dataref("sim/cockpit2/engine/actuators/primer_ratio")
 
 --*************************************************************************************--
 --**                                  FIND DATAREFS                                  **--
@@ -402,7 +404,7 @@ function com2_volume_up_CMDhandler(phase, duration)
 	end
 end
 function com2_volume_dn_CMDhandler(phase, duration)
-	if phase == 0 and simDR_volume_com2 < 0 then
+	if phase == 0 and simDR_volume_com2 >= 0.05 then
 		simDR_volume_com2 = simDR_volume_com2 - 0.1
 	end
 end
@@ -415,8 +417,16 @@ function nav2_volume_up_CMDhandler(phase, duration)
 	end
 end
 function nav2_volume_dn_CMDhandler(phase, duration)
-	if phase == 0 and simDR_volume_com2 < 0 then
+	if phase == 0 and simDR_volume_nav2 >= 0.05 then
 		simDR_volume_nav2 = simDR_volume_nav2 - 0.1
+	end
+end
+
+-- Primer
+
+function toggle_primer_CMDhandler(phase, duration)
+	if phase == 0 then
+		primer_target = 1 - primer_target
 	end
 end
 
@@ -474,6 +484,7 @@ C152CMD_com2_volume_up           = deferred_command("ZLSimulation/C152/radios/co
 C152CMD_com2_volume_dn           = deferred_command("ZLSimulation/C152/radios/com2_volume_dn", "com2 volume down", com2_volume_dn_CMDhandler)
 C152CMD_nav2_volume_up           = deferred_command("ZLSimulation/C152/radios/nav2_volume_up", "nav2 volume up", nav2_volume_up_CMDhandler)
 C152CMD_nav2_volume_dn           = deferred_command("ZLSimulation/C152/radios/nav2_volume_dn", "com2 volume down", nav2_volume_dn_CMDhandler)
+C152CMD_primer_toggle            = deferred_command("ZLSimulation/C152/engine/primer_toggle", "toggle primer", toggle_primer_CMDhandler)
 C152CMD_drawer_toggle            = deferred_command("ZLSimulation/C152/extras/drawer_toggle", "toggle drawer", drawer_toggle_CMDhandler)
 C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/door_toggle_r", "toggle door", r_door_CMDhandler)
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
@@ -559,7 +570,9 @@ function animate_windows()
     C152_window_l_open = C152_set_animation_position(C152_window_l_open, window_l_target, 0.0, 1.0, 3.5)
     C152_window_r_open = C152_set_animation_position(C152_window_r_open, window_r_target, 0.0, 1.0, 3.5)
 end
-
+function animate_primer()
+	simDR_primer_ratio[0] = C152_set_animation_position(simDR_primer_ratio[0], primer_target, 0.0, 1.0, 4)
+end
 
 --*************************************************************************************--
 --**                                    EVENT CALLBACKS                              **--
@@ -580,6 +593,7 @@ end
 function after_physics()
     animate_drawer()
     animate_windows()
+	animate_primer()
 	simDR_transponder_code = tonumber(C152_transponder_thousands..C152_transponder_hundreds..C152_transponder_tens..C152_transponder_ones)
 end
 
