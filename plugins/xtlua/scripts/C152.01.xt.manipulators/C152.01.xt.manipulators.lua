@@ -95,12 +95,17 @@ C152_transponder_hundreds = deferred_dataref("ZLSimulation/C152/radios/transpond
 C152_transponder_tens = deferred_dataref("ZLSimulation/C152/radios/transponder_tens", "number")
 C152_transponder_ones = deferred_dataref("ZLSimulation/C152/radios/transponder_ones", "number")
 
+-- Cabin Air
+C152_cabin_air_ratio = deferred_dataref("ZLSimulation/C152/air/cabin_air_ratio", "number")
+C152_cabin_ht_ratio  = deferred_dataref("ZLSimulation/C152/air/cabin_ht_ratio", "number")
+
 -- Anims
 
 C152_drawer               = deferred_dataref("ZLSimulation/C152/extras/drawer", "number")
 C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_open", "number")
 C152_window_r_open        = deferred_dataref("ZLSimulation/C152/extras/window_r_open", "number")
-
+C152_cockpit_shade_r      = deferred_dataref("ZLSimulation/C152/extras/cockpit_shade_r", "number")
+C152_cockpit_shade_l      = deferred_dataref("ZLSimulation/C152/extras/cockpit_shade_l", "number")
 
 
 --*************************************************************************************--
@@ -583,6 +588,10 @@ end
 function flight_start()
     print("XTLua flight start")
     C152_dome_light_sw = 0
+	C152_cabin_air_ratio = 0
+	C152_cabin_ht_ratio = 0
+	C152_cockpit_shade_l = 0
+	C152_cockpit_shade_r = 0
 end
 --function aircraft_unload()
 

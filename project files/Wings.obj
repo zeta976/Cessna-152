@@ -25871,6 +25871,26 @@ IDX	23502
 IDX	23503
 IDX	23504
 
+	TRIS	0 624
+	TRIS	624 876
+	TRIS	1500 216
+	TRIS	3483 576
+	ANIM_begin
+	ANIM_trans_begin	sim/flightmodel/controls/flaprat
+	ANIM_trans_key	0	0	0	-0
+	ANIM_trans_key	0.5	0	-0.0063999998	0.07271
+	ANIM_trans_key	1	-0	-0.01279	0.14542
+	ANIM_trans_end
+	TRIS	4059 72
+	ANIM_end
+	TRIS	4131 1092
+	TRIS	5223 276
+	TRIS	5499 576
+	TRIS	6075 8448
+	TRIS	14559 108
+	TRIS	14667 108
+	TRIS	14775 108
+	TRIS	15039 1296
 	ANIM_begin
 	ANIM_trans	0	-0.10348	2.9916799	0	-0.10348	2.9916799
 	ANIM_rotate_begin	1	0	-0	sim/flightmodel/controls/hstab1_elv1def
@@ -25878,6 +25898,9 @@ IDX	23504
 	ANIM_rotate_key	0	0
 	ANIM_rotate_key	18	18.000041
 	ANIM_rotate_end
+		TRIS	1716 711
+		TRIS	2427 732
+		TRIS	14523 36
 		ANIM_begin
 		ANIM_trans	0.96416998	0.0092000002	0.21818	0.96416998	0.0092000002	0.21818
 		ANIM_rotate_begin	0	1	-0	sim/flightmodel2/controls/elevator_trim
@@ -25895,6 +25918,7 @@ IDX	23504
 		ANIM_rotate_key	0	0.029793805
 		ANIM_rotate_key	-1	20.029458
 		ANIM_rotate_end
+			TRIS	3159 324
 			ANIM_begin
 			ANIM_trans	-0.19671001	-0.071630001	-0.01113	-0.19671001	-0.071630001	-0.01113
 			ANIM_rotate	0	1	0	-5.4190348	-5.4190348
@@ -25916,12 +25940,9 @@ IDX	23504
 			ANIM_rotate_end
 				TRIS	14883 156
 			ANIM_end
-			TRIS	3159 324
 		ANIM_end
-		TRIS	1716 711
-		TRIS	2427 732
-		TRIS	14523 36
 	ANIM_end
+	TRIS	16335 900
 	ANIM_begin
 	ANIM_trans_begin	sim/flightmodel/controls/flaprat
 	ANIM_trans_key	0	-1.51333	0.35991001	-1.06163
@@ -25996,28 +26017,7 @@ IDX	23504
 	ANIM_rotate_end
 		TRIS	23379 66
 	ANIM_end
-	TRIS	0 624
-	TRIS	624 876
-	TRIS	1500 216
-	TRIS	3483 576
-	ANIM_begin
-	ANIM_trans_begin	sim/flightmodel/controls/flaprat
-	ANIM_trans_key	0	0	0	-0
-	ANIM_trans_key	0.5	0	-0.0063999998	0.07271
-	ANIM_trans_key	1	-0	-0.01279	0.14542
-	ANIM_trans_end
-	TRIS	4059 72
-	ANIM_end
-	TRIS	4131 1092
-	TRIS	5223 276
-	TRIS	5499 576
-	TRIS	6075 8448
-	TRIS	14559 108
-	TRIS	14667 108
-	TRIS	14775 108
-	TRIS	15039 1296
-	TRIS	16335 900
 	TRIS	19827 1524
 	TRIS	21351 2028
 
-# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.1.0-beta.1+101.20201117225215
+# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.2.0-rc.2+117.20220419015723

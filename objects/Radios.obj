@@ -19405,6 +19405,19 @@ IDX10	17610	17611	17612	17613	17614	17615	17616	17617	17618	17619
 IDX10	17620	17621	17622	17623	17624	17625	17626	17627	17628	17629
 IDX	17630
 
+	ATTR_shiny_rat	0.5
+	TRIS	0 294
+	TRIS	294 534
+	TRIS	828 294
+	TRIS	1122 534
+	TRIS	1656 498
+	TRIS	2154 138
+	TRIS	2292 138
+	TRIS	5670 534
+	TRIS	6204 390
+	TRIS	6594 534
+	TRIS	7128 390
+	TRIS	8178 162
 	ANIM_begin
 	ANIM_trans_begin	ZLSimulation/C152/electrical/flap_lever
 	ANIM_trans_key	0	0.15623	-0.4102	-2.5425701
@@ -19430,7 +19443,6 @@ IDX	17630
 	ANIM_rotate_key	0.66666698	37.969913
 	ANIM_rotate_key	1	53.014637
 	ANIM_rotate_end
-		ATTR_shiny_rat	0.5
 		TRIS	2430 468
 	ANIM_end
 	ANIM_begin
@@ -19635,18 +19647,6 @@ IDX	17630
 	ANIM_rotate_end
 		TRIS	3942 234
 	ANIM_end
-	TRIS	0 294
-	TRIS	294 534
-	TRIS	828 294
-	TRIS	1122 534
-	TRIS	1656 498
-	TRIS	2154 138
-	TRIS	2292 138
-	TRIS	5670 534
-	TRIS	6204 390
-	TRIS	6594 534
-	TRIS	7128 390
-	TRIS	8178 162
 	TRIS	9330 1689
 	TRIS	11019 330
 	TRIS	11349 330
@@ -19666,11 +19666,11 @@ IDX	17630
 	5
 	TRIS	15897 606
 	TRIS	16503 330
+	ATTR_light_level 0 1	sim/cockpit/radios/transponder_id
+	TRIS	16833 246
 	ATTR_light_level 0 1	sim/cockpit/misc/inner_marker_lit
 	TRIS	17139 6
 	ATTR_light_level 0 1	sim/cockpit/misc/outer_marker_lit
 	TRIS	17145 6
-	ATTR_light_level 0 1	sim/cockpit/radios/transponder_id
-	TRIS	16833 246
 
-# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.1.0-beta.1+101.20201117225215
+# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.2.0-rc.2+117.20220419015723
