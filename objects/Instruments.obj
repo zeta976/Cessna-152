@@ -48535,8 +48535,8 @@ IDX	43475
 		TRIS	12630 414
 	ANIM_end
 	ANIM_begin
-	ANIM_trans_begin	sim/cockpit2/radios/indicators/nav1_flag_glideslope_mech
-	ANIM_trans_key	1	-0.037179997	-0.14438999	-2.4911798
+	ANIM_trans_begin	sim/cockpit2/radios/indicators/hsi_display_vertical_pilot
+	ANIM_trans_key	0	-0.037179997	-0.14438999	-2.4911798
 	ANIM_trans_key	1	-0.027769998	-0.14438999	-2.4911798
 	ANIM_trans_end
 		TRIS	32121 66

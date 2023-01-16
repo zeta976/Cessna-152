@@ -1,0 +1,177 @@
+﻿A
+1000
+ACF_SOUNDS
+
+BEGIN_SOUND_SPACE
+	SOUND_INDEX 0
+	BLEND_DEPTH 0.03
+	SPHERE 0.0000 0.0000 0.0000 5.0
+END_SOUND_SPACE
+
+#################
+# LIGHT SWITCHES
+#################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/lights/beacon_lights_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/lights/landing_01_light_tog
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/lights/nav_lights_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/ice/pitot_heat0_tog
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_switch
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/dome_light_toggle
+END_SOUND_ATTACHMENT
+
+#################
+# MASTER SWITCH
+#################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_master
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/electrical/generator_1_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /tog_master
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/electrical/battery_1_toggle
+END_SOUND_ATTACHMENT
+
+#################
+# KEY
+#################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /key
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/ignition/ignition_up_1
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /key
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/ignition/ignition_down_1
+	EVENT_START_COND sim/cockpit2/engine/actuators/ignition_key[0] >= 1.0
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+#################
+# BATTERY BACKGROUND
+#################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /bat_bg
+	VEH_PART cockpit 0
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/cockpit/electrical/battery_on == 1.0
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+#################
+# ENGINE
+#################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /engine
+	VEH_PART engine 0
+	EVENT_ALLOWED_FOR_AI
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] > 1
+	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] < 1
+END_SOUND_ATTACHMENT
+
+#################
+# FLAPS
+#################
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /flaps_notch
+    VEH_XYZ 0.00 0.63 1.2
+    EVENT_ALLOWED_FOR_AI
+    EVENT_START_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] < -0.05
+    CUE_TRIGGER_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] == -0.05
+    EVENT_END_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] > -0.05
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /flaps_notch
+    VEH_XYZ 0.00 0.63 1.2
+    EVENT_ALLOWED_FOR_AI
+    EVENT_START_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] > 0.05
+    CUE_TRIGGER_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] == 0.05
+    EVENT_END_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] < 0.05
+END_SOUND_ATTACHMENT
+
+#################
+# SKID
+#################
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /skid
+    VEH_PART tire 0
+    PARAM_DREF_IDX 0
+    EVENT_ALLOWED_FOR_AI
+    EVENT_START_COND sim/flightmodel2/gear/tire_skid_ratio[0] > 0.7
+    EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /skid
+    VEH_PART tire 1
+    PARAM_DREF_IDX 1
+    EVENT_ALLOWED_FOR_AI
+    EVENT_START_COND sim/flightmodel2/gear/tire_skid_ratio[1] > 0.7
+    EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /skid
+    VEH_PART tire 2
+    PARAM_DREF_IDX 2
+    EVENT_ALLOWED_FOR_AI
+    EVENT_START_COND sim/flightmodel2/gear/tire_skid_ratio[2] > 0.7
+    EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
+#################
+# PRIMER
+#################
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /primer_in
+    VEH_PART cockpit 0
+    EVENT_ALLOWED_FOR_AI
+    EVENT_CMND_DOWN ZLSimulation/C152/engine/primer_toggle
+    EVENT_START_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 1.0
+    EVENT_END_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 0.0
+END_SOUND_ATTACHMENT
+
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /primer_out
+    VEH_PART cockpit 0
+    EVENT_ALLOWED_FOR_AI
+    EVENT_CMND_DOWN ZLSimulation/C152/engine/primer_toggle
+    EVENT_START_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 0.0
+    EVENT_END_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 1.0
+END_SOUND_ATTACHMENT
