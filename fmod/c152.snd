@@ -95,7 +95,6 @@ END_SOUND_ATTACHMENT
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME /engine
 	VEH_PART engine 0
-	EVENT_ALLOWED_FOR_AI
 	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] > 1
 	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] < 1
 END_SOUND_ATTACHMENT
@@ -174,4 +173,178 @@ BEGIN_SOUND_ATTACHMENT
     EVENT_CMND_DOWN ZLSimulation/C152/engine/primer_toggle
     EVENT_START_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 0.0
     EVENT_END_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 1.0
+END_SOUND_ATTACHMENT
+
+####################
+# CIRCUIT BREAKERS
+####################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_1_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_2_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_3_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_4_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_5_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_6_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_7_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_8_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_9_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_10_toggle
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/electrical/circuit_breaker_11_toggle
+END_SOUND_ATTACHMENT
+
+####################
+# DRAWER
+####################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /drawer
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN ZLSimulation/C152/extras/drawer_toggle
+END_SOUND_ATTACHMENT
+
+####################
+# ROTATORY
+####################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/GPS/g430n1_coarse_up
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /circuitbk
+	VEH_PART cockpit 0
+	EVENT_CMND_DOWN sim/GPS/g430n1_coarse_down
+END_SOUND_ATTACHMENT
+
+####################
+# DOORS
+####################
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /door_open
+    VEH_PART cockpit 0
+    EVENT_START_COND DELTA=sim/flightmodel2/misc/door_open_ratio[0] > 0.05
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /door_close
+    VEH_PART cockpit 0
+    EVENT_START_COND DELTA=sim/flightmodel2/misc/door_open_ratio[0] < -0.05
+	EVENT_START_COND sim/flightmodel2/misc/door_open_ratio[0] < 0.5
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /door_open
+    VEH_PART cockpit 0
+    EVENT_START_COND DELTA=sim/flightmodel2/misc/door_open_ratio[1] > 0.05
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /door_close
+    VEH_PART cockpit 0
+    EVENT_START_COND DELTA=sim/flightmodel2/misc/door_open_ratio[1] < -0.05
+	EVENT_START_COND sim/flightmodel2/misc/door_open_ratio[1] < 0.5
+END_SOUND_ATTACHMENT
+
+####################
+# WINDOWS
+####################
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /window_open
+    VEH_PART cockpit 0
+    EVENT_START_COND DELTA=ZLSimulation/C152/extras/window_l_open > 0.05
+	EVENT_START_COND ZLSimulation/C152/extras/window_l_open < 0.5
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /window_close
+    VEH_PART cockpit 0
+    EVENT_START_COND DELTA=ZLSimulation/C152/extras/window_l_open < -0.05
+	EVENT_START_COND ZLSimulation/C152/extras/window_l_open > 0.5
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /window_open
+    VEH_PART cockpit 0
+    EVENT_START_COND DELTA=ZLSimulation/C152/extras/window_r_open > 0.05
+	EVENT_START_COND ZLSimulation/C152/extras/window_r_open < 0.5
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /window_close
+    VEH_PART cockpit 0
+    EVENT_START_COND DELTA=ZLSimulation/C152/extras/window_r_open < -0.05
+	EVENT_START_COND ZLSimulation/C152/extras/window_r_open > 0.5
+END_SOUND_ATTACHMENT
+
+####################
+# PARKING BREAK
+####################
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /pkbrake
+    VEH_PART cockpit 0
+    EVENT_START_COND sim/cockpit2/controls/parking_brake_ratio == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+    EVENT_NAME /pkbrake
+    VEH_PART cockpit 0
+    EVENT_START_COND sim/cockpit2/controls/parking_brake_ratio == 1
 END_SOUND_ATTACHMENT

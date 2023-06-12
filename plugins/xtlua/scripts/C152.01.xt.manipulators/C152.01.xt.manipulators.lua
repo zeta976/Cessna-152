@@ -44,6 +44,8 @@ primer_target = 0
 drawer_target = 0
 window_l_target = 0
 window_r_target = 0
+C152_panel_lt = 0
+C152_radio_lt = 0
 
 --*************************************************************************************--
 --**                               FIND X-PLANE DATAREFS                             **--
@@ -55,6 +57,7 @@ simDR_transponder_mode = find_dataref("sim/cockpit2/radios/actuators/transponder
 simDR_volume_com2      = find_dataref("sim/cockpit2/radios/actuators/audio_volume_com2")
 simDR_volume_nav2      = find_dataref("sim/cockpit2/radios/actuators/audio_volume_nav2")
 simDR_primer_ratio     = find_dataref("sim/cockpit2/engine/actuators/primer_ratio")
+simDR_battery_on       = find_dataref("sim/cockpit/electrical/battery_on")
 
 --*************************************************************************************--
 --**                                  FIND DATAREFS                                  **--
@@ -73,6 +76,8 @@ simDR_primer_ratio     = find_dataref("sim/cockpit2/engine/actuators/primer_rati
 
 C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") -- Alternator
 C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") --Circuit Breakers
+C152_panel_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/panel_lt", "number")
+C152_radio_lt_dref       = deferred_dataref("ZLSimulation/C152/electrical/radio_lt", "number")
 
 -- Switch Panel
 
@@ -435,6 +440,31 @@ function toggle_primer_CMDhandler(phase, duration)
 	end
 end
 
+-- Panel LT
+
+function panel_lt_up_CMDhandler(phase, duration)
+	if phase == 0 and C152_panel_lt < 1.0 then
+		C152_panel_lt = C152_panel_lt + 0.2
+	end
+end
+function panel_lt_dn_CMDhandler(phase, duration)
+	if phase == 0 and C152_panel_lt > 0.0 then
+		C152_panel_lt = C152_panel_lt - 0.2
+	end
+end
+
+-- Radio LT
+
+function radio_lt_up_CMDhandler(phase, duration)
+	if phase == 0 and C152_radio_lt < 1.0 then
+		C152_radio_lt = C152_radio_lt + 0.2
+	end
+end
+function radio_lt_dn_CMDhandler(phase, duration)
+	if phase == 0 and C152_radio_lt > 0.0 then
+		C152_radio_lt = C152_radio_lt - 0.2
+	end
+end
 --Drawer toggle
 function drawer_toggle_CMDhandler(phase, duration)
     if phase == 0 then 
@@ -485,6 +515,10 @@ C152CMD_CircuitBreaker_9_toggle  = deferred_command("ZLSimulation/C152/electrica
 C152CMD_CircuitBreaker_10_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_10_toggle", "toggle circuit breaker 10", circuit_breaker_10_CMDhandler)
 C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_11_toggle", "toggle circuit breaker 11", circuit_breaker_11_CMDhandler)
 C152CMD_dome_light_toggle        = deferred_command("ZLSimulation/C152/electrical/dome_light_toggle", "toggle dome light", dome_light_tog_CMDhandler)
+C152CMD_panel_lt_up              = deferred_command("ZLSimulation/C152/electrical/panel_lt_up", "panel lt up", panel_lt_up_CMDhandler)
+C152CMD_panel_lt_dn              = deferred_command("ZLSimulation/C152/electrical/panel_lt_dn", "panel lt dn", panel_lt_dn_CMDhandler)
+C152CMD_radio_lt_up              = deferred_command("ZLSimulation/C152/electrical/radio_lt_up", "radio lt up", radio_lt_up_CMDhandler)
+C152CMD_radio_lt_dn              = deferred_command("ZLSimulation/C152/electrical/radio_lt_dn", "radio lt dn", radio_lt_dn_CMDhandler)
 C152CMD_com2_volume_up           = deferred_command("ZLSimulation/C152/radios/com2_volume_up", "com2 volume up", com2_volume_up_CMDhandler)
 C152CMD_com2_volume_dn           = deferred_command("ZLSimulation/C152/radios/com2_volume_dn", "com2 volume down", com2_volume_dn_CMDhandler)
 C152CMD_nav2_volume_up           = deferred_command("ZLSimulation/C152/radios/nav2_volume_up", "nav2 volume up", nav2_volume_up_CMDhandler)
@@ -579,7 +613,7 @@ function animate_primer()
 	simDR_primer_ratio[0] = C152_set_animation_position(simDR_primer_ratio[0], primer_target, 0.0, 1.0, 4)
 end
 
---*************************************************************************************--
+--****************************************************************************	*********--
 --**                                    EVENT CALLBACKS                              **--
 --*************************************************************************************--
 
@@ -604,6 +638,13 @@ function after_physics()
     animate_windows()
 	animate_primer()
 	simDR_transponder_code = tonumber(C152_transponder_thousands..C152_transponder_hundreds..C152_transponder_tens..C152_transponder_ones)
+	if simDR_battery_on == 1 then
+		C152_panel_lt_dref = C152_panel_lt
+		C152_radio_lt_dref = C152_radio_lt
+	else
+		C152_panel_lt_dref = 0
+		C152_radio_lt_dref = 0
+	end
 end
 
 

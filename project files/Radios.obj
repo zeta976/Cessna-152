@@ -19405,12 +19405,15 @@ IDX10	17610	17611	17612	17613	17614	17615	17616	17617	17618	17619
 IDX10	17620	17621	17622	17623	17624	17625	17626	17627	17628	17629
 IDX	17630
 
+	ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 	ATTR_shiny_rat	0.5
 	TRIS	0 294
 	TRIS	294 534
 	TRIS	828 294
 	TRIS	1122 534
+	5
 	TRIS	1656 498
+	ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 	TRIS	2154 138
 	TRIS	2292 138
 	TRIS	5670 534
@@ -19443,6 +19446,7 @@ IDX	17630
 	ANIM_rotate_key	0.66666698	37.969913
 	ANIM_rotate_key	1	53.014637
 	ANIM_rotate_end
+	5
 		TRIS	2430 468
 	ANIM_end
 	ANIM_begin
@@ -19471,6 +19475,7 @@ IDX	17630
 	ANIM_rotate_key	4	179.99985
 	ANIM_rotate_key	6	270.00006
 	ANIM_rotate_end
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	7848 330
 	ANIM_end
 	ANIM_begin
@@ -19481,6 +19486,8 @@ IDX	17630
 	ANIM_rotate_key	4	179.99985
 	ANIM_rotate_key	6	270.00006
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	8340 330
 	ANIM_end
 	ANIM_begin
@@ -19491,6 +19498,8 @@ IDX	17630
 	ANIM_rotate_key	4	179.99985
 	ANIM_rotate_key	6	270.00006
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	8670 330
 	ANIM_end
 	ANIM_begin
@@ -19501,6 +19510,8 @@ IDX	17630
 	ANIM_rotate_key	4	179.99985
 	ANIM_rotate_key	6	270.00006
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	9000 330
 	ANIM_end
 	ANIM_begin
@@ -19526,6 +19537,8 @@ IDX	17630
 	ANIM_rotate_key	3	-0
 	ANIM_rotate_key	4	-0
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	7518 330
 	ANIM_end
 	ANIM_begin
@@ -19533,6 +19546,8 @@ IDX	17630
 	ANIM_trans_key	1	0.027659999	-0.086070001	-2.48294
 	ANIM_trans_key	0	0.027659999	-0.086070001	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	15837 30
 	ANIM_end
 	ANIM_begin
@@ -19540,14 +19555,20 @@ IDX	17630
 	ANIM_trans_key	0	0.027659999	-0.10486	-2.48294
 	ANIM_trans_key	1	0.027659999	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	15867 30
 	ANIM_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17079 60
 	ANIM_begin
 	ANIM_trans_begin	sim/cockpit2/radios/actuators/audio_selection_com1
 	ANIM_trans_key	0	0.056990001	-0.10486	-2.48294
 	ANIM_trans_key	1	0.056990001	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17151 60
 	ANIM_end
 	ANIM_begin
@@ -19555,6 +19576,8 @@ IDX	17630
 	ANIM_trans_key	0	0.071709998	-0.10486	-2.48294
 	ANIM_trans_key	1	0.071709998	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17211 60
 	ANIM_end
 	ANIM_begin
@@ -19562,6 +19585,8 @@ IDX	17630
 	ANIM_trans_key	0	0.086439997	-0.10486	-2.48294
 	ANIM_trans_key	1	0.086439997	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17271 60
 	ANIM_end
 	ANIM_begin
@@ -19569,6 +19594,8 @@ IDX	17630
 	ANIM_trans_key	0	0.10117	-0.10486	-2.48294
 	ANIM_trans_key	1	0.10117	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17331 60
 	ANIM_end
 	ANIM_begin
@@ -19576,6 +19603,8 @@ IDX	17630
 	ANIM_trans_key	0	0.11589	-0.10486	-2.48294
 	ANIM_trans_key	1	0.11589	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17391 60
 	ANIM_end
 	ANIM_begin
@@ -19583,6 +19612,8 @@ IDX	17630
 	ANIM_trans_key	0	0.13062	-0.10486	-2.48294
 	ANIM_trans_key	1	0.13062	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17451 60
 	ANIM_end
 	ANIM_begin
@@ -19590,6 +19621,8 @@ IDX	17630
 	ANIM_trans_key	0	0.14534999	-0.10486	-2.48294
 	ANIM_trans_key	1	0.14534999	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17511 60
 	ANIM_end
 	ANIM_begin
@@ -19597,6 +19630,8 @@ IDX	17630
 	ANIM_trans_key	0	0.16007	-0.10486	-2.48294
 	ANIM_trans_key	1	0.16007	-0.10486	-2.4850099
 	ANIM_trans_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	17571 60
 	ANIM_end
 	ANIM_begin
@@ -19609,6 +19644,8 @@ IDX	17630
 	ANIM_rotate_key	8	144.00263
 	ANIM_rotate_key	9	167.31685
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	4410 600
 	ANIM_end
 	ANIM_begin
@@ -19618,6 +19655,8 @@ IDX	17630
 	ANIM_rotate_key	0.5	69.311278
 	ANIM_rotate_key	1	179.31115
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	5340 330
 	ANIM_end
 	ANIM_begin
@@ -19627,6 +19666,8 @@ IDX	17630
 	ANIM_rotate_key	0.5	69.299816
 	ANIM_rotate_key	1	179.30027
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	5010 330
 	ANIM_end
 	ANIM_begin
@@ -19636,6 +19677,8 @@ IDX	17630
 	ANIM_rotate_key	0.5	78.124517
 	ANIM_rotate_key	1	178.12456
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	4176 234
 	ANIM_end
 	ANIM_begin
@@ -19645,6 +19688,8 @@ IDX	17630
 	ANIM_rotate_key	0.5	77.865536
 	ANIM_rotate_key	1	187.86542
 	ANIM_rotate_end
+	5
+		ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 		TRIS	3942 234
 	ANIM_end
 	TRIS	9330 1689
@@ -19663,7 +19708,7 @@ IDX	17630
 	TRIS	15165 666
 	ATTR_light_level 0 1	sim/cockpit/misc/middle_marker_lit
 	TRIS	15831 6
-	5
+	ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
 	TRIS	15897 606
 	TRIS	16503 330
 	ATTR_light_level 0 1	sim/cockpit/radios/transponder_id

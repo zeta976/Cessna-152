@@ -42,6 +42,10 @@ C152CMD_CircuitBreaker_9_toggle  = deferred_command("ZLSimulation/C152/electrica
 C152CMD_CircuitBreaker_10_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_10_toggle", "toggle circuit breaker 10", circuit_breaker_10_CMDhandler)
 C152CMD_CircuitBreaker_11_toggle = deferred_command("ZLSimulation/C152/electrical/circuit_breaker_11_toggle", "toggle circuit breaker 11", circuit_breaker_11_CMDhandler)
 C152CMD_dome_light_toggle        = deferred_command("ZLSimulation/C152/electrical/dome_light_toggle", "toggle dome light", dome_light_tog_CMDhandler)
+C152CMD_panel_lt_up              = deferred_command("ZLSimulation/C152/electrical/panel_lt_up", "panel lt up", panel_lt_up_CMDhandler)
+C152CMD_panel_lt_dn              = deferred_command("ZLSimulation/C152/electrical/panel_lt_dn", "panel lt dn", panel_lt_dn_CMDhandler)
+C152CMD_radio_lt_up              = deferred_command("ZLSimulation/C152/electrical/radio_lt_up", "radio lt up", radio_lt_up_CMDhandler)
+C152CMD_radio_lt_dn              = deferred_command("ZLSimulation/C152/electrical/radio_lt_dn", "radio lt dn", radio_lt_dn_CMDhandler)
 C152CMD_com2_volume_up           = deferred_command("ZLSimulation/C152/radios/com2_volume_up", "com2 volume up", com2_volume_up_CMDhandler)
 C152CMD_com2_volume_dn           = deferred_command("ZLSimulation/C152/radios/com2_volume_dn", "com2 volume down", com2_volume_dn_CMDhandler)
 C152CMD_nav2_volume_up           = deferred_command("ZLSimulation/C152/radios/nav2_volume_up", "nav2 volume up", nav2_volume_up_CMDhandler)
@@ -58,6 +62,8 @@ C152CMD_window_r_toggle          = deferred_command("ZLSimulation/C152/extras/wi
 --*************************************************************************************--
 C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") -- Alternator
 C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") --Circuit Breakers
+C152_panel_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/panel_lt", "number")
+C152_radio_lt_dref       = deferred_dataref("ZLSimulation/C152/electrical/radio_lt", "number")
 
 -- Switch Panel
 

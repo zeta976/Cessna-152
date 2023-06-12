@@ -57,6 +57,7 @@ simDR_flap_lever           = find_dataref("sim/cockpit2/controls/flap_ratio")
 simDR_cockpit_brightness   = find_dataref("sim/cockpit/electrical/cockpit_lights")
 simDR_com2_pwr             = find_dataref("sim/cockpit2/radios/actuators/com2_power")
 simDR_hsi_copilot_src      = find_dataref("sim/cockpit2/radios/actuators/HSI_source_select_copilot")
+simDR_gps_pow              = find_dataref("sim/cockpit2/radios/actuators/gps_power")
 
 
 --*************************************************************************************--
@@ -165,7 +166,20 @@ function circuit_breakers()
 		simDR_nav_lights_on = 0
 		simDR_cockpit_brightness = 0
     end
-
+	
+	-- Circuit breaker 9 (radios 2 - gns430)
+	if C152_circuit_breakers[8] == 0 then
+		simDR_gps_pow = 0
+	else
+		simDR_gps_pow = 1
+	end
+	
+	-- Circuit breaker 10 (radios 3 - com2)
+	if (C152_circuit_breakers[9] == 1) and (simDR_battery_on == 1) then
+		simDR_com2_pwr = 1
+	else
+		simDR_com2_pwr = 0
+	end
 end
 
 
