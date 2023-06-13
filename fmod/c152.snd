@@ -83,7 +83,6 @@ END_SOUND_ATTACHMENT
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME /bat_bg
 	VEH_PART cockpit 0
-	EVENT_ALLOWED_FOR_AI
 	EVENT_START_COND sim/cockpit/electrical/battery_on == 1.0
 	EVENT_AUTO_END_FROM_START_COND
 END_SOUND_ATTACHMENT
@@ -95,6 +94,7 @@ END_SOUND_ATTACHMENT
 BEGIN_SOUND_ATTACHMENT
 	EVENT_NAME /engine
 	VEH_PART engine 0
+	EVENT_ALLOWED_FOR_AI
 	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] > 1
 	EVENT_END_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] < 1
 END_SOUND_ATTACHMENT
@@ -159,7 +159,6 @@ END_SOUND_ATTACHMENT
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /primer_in
     VEH_PART cockpit 0
-    EVENT_ALLOWED_FOR_AI
     EVENT_CMND_DOWN ZLSimulation/C152/engine/primer_toggle
     EVENT_START_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 1.0
     EVENT_END_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 0.0
@@ -169,7 +168,6 @@ END_SOUND_ATTACHMENT
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /primer_out
     VEH_PART cockpit 0
-    EVENT_ALLOWED_FOR_AI
     EVENT_CMND_DOWN ZLSimulation/C152/engine/primer_toggle
     EVENT_START_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 0.0
     EVENT_END_COND sim/cockpit2/engine/actuators/primer_ratio[0] == 1.0
@@ -277,26 +275,26 @@ END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /door_open
-    VEH_PART cockpit 0
+    VEH_XYZ -0.55 0.1 0.55
     EVENT_START_COND DELTA=sim/flightmodel2/misc/door_open_ratio[0] > 0.05
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /door_close
-    VEH_PART cockpit 0
+    VEH_XYZ -0.55 0.1 0.55
     EVENT_START_COND DELTA=sim/flightmodel2/misc/door_open_ratio[0] < -0.05
 	EVENT_START_COND sim/flightmodel2/misc/door_open_ratio[0] < 0.5
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /door_open
-    VEH_PART cockpit 0
+    VEH_XYZ 0.55 0.1 0.55
     EVENT_START_COND DELTA=sim/flightmodel2/misc/door_open_ratio[1] > 0.05
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /door_close
-    VEH_PART cockpit 0
+    VEH_XYZ 0.55 0.1 0.55
     EVENT_START_COND DELTA=sim/flightmodel2/misc/door_open_ratio[1] < -0.05
 	EVENT_START_COND sim/flightmodel2/misc/door_open_ratio[1] < 0.5
 END_SOUND_ATTACHMENT
@@ -307,28 +305,28 @@ END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /window_open
-    VEH_PART cockpit 0
+    VEH_XYZ -0.55 0.3 0.4
     EVENT_START_COND DELTA=ZLSimulation/C152/extras/window_l_open > 0.05
 	EVENT_START_COND ZLSimulation/C152/extras/window_l_open < 0.5
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /window_close
-    VEH_PART cockpit 0
+    VEH_XYZ -0.55 0.3 0.4
     EVENT_START_COND DELTA=ZLSimulation/C152/extras/window_l_open < -0.05
 	EVENT_START_COND ZLSimulation/C152/extras/window_l_open > 0.5
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /window_open
-    VEH_PART cockpit 0
+    VEH_XYZ 0.55 0.3 0.4
     EVENT_START_COND DELTA=ZLSimulation/C152/extras/window_r_open > 0.05
 	EVENT_START_COND ZLSimulation/C152/extras/window_r_open < 0.5
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
     EVENT_NAME /window_close
-    VEH_PART cockpit 0
+    VEH_XYZ 0.55 0.3 0.4
     EVENT_START_COND DELTA=ZLSimulation/C152/extras/window_r_open < -0.05
 	EVENT_START_COND ZLSimulation/C152/extras/window_r_open > 0.5
 END_SOUND_ATTACHMENT
