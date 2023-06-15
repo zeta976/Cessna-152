@@ -58,6 +58,8 @@ simDR_volume_com2      = find_dataref("sim/cockpit2/radios/actuators/audio_volum
 simDR_volume_nav2      = find_dataref("sim/cockpit2/radios/actuators/audio_volume_nav2")
 simDR_primer_ratio     = find_dataref("sim/cockpit2/engine/actuators/primer_ratio")
 simDR_battery_on       = find_dataref("sim/cockpit/electrical/battery_on")
+simDR_inside_any       = find_dataref("sim/operation/sound/inside_any")
+simDR_door_open_ratio  = find_dataref("sim/flightmodel2/misc/door_open_ratio")
 
 --*************************************************************************************--
 --**                                  FIND DATAREFS                                  **--
@@ -111,6 +113,10 @@ C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_
 C152_window_r_open        = deferred_dataref("ZLSimulation/C152/extras/window_r_open", "number")
 C152_cockpit_shade_r      = deferred_dataref("ZLSimulation/C152/extras/cockpit_shade_r", "number")
 C152_cockpit_shade_l      = deferred_dataref("ZLSimulation/C152/extras/cockpit_shade_l", "number")
+
+--Sound
+
+C152_exterior_muffling    = deferred_dataref("ZLSimulation/C152/sound/exterior_muffling", "number")
 
 
 --*************************************************************************************--
@@ -613,6 +619,17 @@ function animate_primer()
 	simDR_primer_ratio[0] = C152_set_animation_position(simDR_primer_ratio[0], primer_target, 0.0, 1.0, 4)
 end
 
+function exterior_muffling()
+	if simDR_inside_any == 0 then
+		C152_exterior_muffling = 0
+	elseif simDR_door_open_ratio[0] == 0 and simDR_door_open_ratio[1] == 0 then
+		C152_exterior_muffling = 1 - (0.2*C152_window_l_open + 0.2*C152_window_r_open)
+	else
+		C152_exterior_muffling = 1 - (0.4*simDR_door_open_ratio[0] + 0.4*simDR_door_open_ratio[1])
+	end
+	print(C152_exterior_muffling)
+end
+
 --****************************************************************************	*********--
 --**                                    EVENT CALLBACKS                              **--
 --*************************************************************************************--
@@ -634,6 +651,7 @@ end
 --function before_physics()
 
 function after_physics()
+	exterior_muffling()
     animate_drawer()
     animate_windows()
 	animate_primer()

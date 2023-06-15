@@ -97,3 +97,7 @@ C152_window_l_open        = deferred_dataref("ZLSimulation/C152/extras/window_l_
 C152_window_r_open        = deferred_dataref("ZLSimulation/C152/extras/window_r_open", "number")
 C152_cockpit_shade_r      = deferred_dataref("ZLSimulation/C152/extras/cockpit_shade_r", "number")
 C152_cockpit_shade_l      = deferred_dataref("ZLSimulation/C152/extras/cockpit_shade_l", "number")
+
+--Sound
+
+C152_exterior_muffling    = deferred_dataref("ZLSimulation/C152/sound/exterior_muffling", "number")

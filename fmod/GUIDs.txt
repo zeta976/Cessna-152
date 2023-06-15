@@ -25,4 +25,5 @@
 {751f5066-4651-4afb-a410-4cb9db0894c9} bus:/Master/Interior
 {d8526059-b27c-4eae-9b14-a1ee1cb3dfa1} bus:/Master/Radios
 {77575f3b-b9cd-4bff-9056-637cff744a14} bus:/Master/UI
+{d5abd5e2-90ae-4f5b-9306-1a99f134de4c} snapshot:/exterior_muffling
 {ed2bacfd-73ec-4f6f-b4b4-6a64d8eee27b} bank:/Master Bank

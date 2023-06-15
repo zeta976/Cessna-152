@@ -5,8 +5,19 @@ ACF_SOUNDS
 BEGIN_SOUND_SPACE
 	SOUND_INDEX 0
 	BLEND_DEPTH 0.03
-	SPHERE 0.0000 0.0000 0.0000 5.0
+	SPHERE 0.0000 0.0000 0.0000 4.0
 END_SOUND_SPACE
+
+##################
+# MIXER SNAPSHOTS
+##################
+
+BEGIN_SOUND_ATTACHMENT
+	SNAPSHOT_NAME /exterior_muffling
+	EVENT_START_COND sim/flightmodel2/engines/engine_rotation_speed_rad_sec[0] > 1
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT
+
 
 #################
 # LIGHT SWITCHES
@@ -108,7 +119,6 @@ BEGIN_SOUND_ATTACHMENT
     VEH_XYZ 0.00 0.63 1.2
     EVENT_ALLOWED_FOR_AI
     EVENT_START_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] < -0.05
-    CUE_TRIGGER_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] == -0.05
     EVENT_END_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] > -0.05
 END_SOUND_ATTACHMENT
 
@@ -117,7 +127,6 @@ BEGIN_SOUND_ATTACHMENT
     VEH_XYZ 0.00 0.63 1.2
     EVENT_ALLOWED_FOR_AI
     EVENT_START_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] > 0.05
-    CUE_TRIGGER_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] == 0.05
     EVENT_END_COND DELTA=sim/flightmodel2/wing/flap1_deg[0] < 0.05
 END_SOUND_ATTACHMENT
 
@@ -258,13 +267,13 @@ END_SOUND_ATTACHMENT
 ####################
 
 BEGIN_SOUND_ATTACHMENT
-	EVENT_NAME /circuitbk
+	EVENT_NAME /rotatory
 	VEH_PART cockpit 0
 	EVENT_CMND_DOWN sim/GPS/g430n1_coarse_up
 END_SOUND_ATTACHMENT
 
 BEGIN_SOUND_ATTACHMENT
-	EVENT_NAME /circuitbk
+	EVENT_NAME /rotatory
 	VEH_PART cockpit 0
 	EVENT_CMND_DOWN sim/GPS/g430n1_coarse_down
 END_SOUND_ATTACHMENT
