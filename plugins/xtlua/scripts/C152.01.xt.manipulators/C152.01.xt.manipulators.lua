@@ -60,6 +60,10 @@ simDR_primer_ratio     = find_dataref("sim/cockpit2/engine/actuators/primer_rati
 simDR_battery_on       = find_dataref("sim/cockpit/electrical/battery_on")
 simDR_inside_any       = find_dataref("sim/operation/sound/inside_any")
 simDR_door_open_ratio  = find_dataref("sim/flightmodel2/misc/door_open_ratio")
+simDR_startup_running  = find_dataref("sim/operation/prefs/startup_running")
+simDR_yoke_roll_ratio  = find_dataref("sim/cockpit2/controls/yoke_roll_ratio")
+simDR_yoke_pitch_ratio = find_dataref("sim/cockpit2/controls/yoke_pitch_ratio")
+simDR_controls_lock    = find_dataref("sim/operation/failures/rel_conlock")
 
 --*************************************************************************************--
 --**                                  FIND DATAREFS                                  **--
@@ -76,10 +80,12 @@ simDR_door_open_ratio  = find_dataref("sim/flightmodel2/misc/door_open_ratio")
 --**                              CREATE CUSTOM DATAREFS                             **--
 --*************************************************************************************--
 
+C152_yoke_roll_ratio      = deferred_dataref("ZLSimulation/C152/controls/yoke_roll_ratio", "number")
+C152_yoke_pitch_ratio     = deferred_dataref("ZLSimulation/C152/controls/yoke_pitch_ratio", "number")
 C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") -- Alternator
 C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") --Circuit Breakers
 C152_panel_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/panel_lt", "number")
-C152_radio_lt_dref       = deferred_dataref("ZLSimulation/C152/electrical/radio_lt", "number")
+C152_radio_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/radio_lt", "number")
 
 -- Switch Panel
 
@@ -97,14 +103,14 @@ C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_
 
 -- Transponder
 
-C152_transponder_thousands = deferred_dataref("ZLSimulation/C152/radios/transponder_thousands", "number")
+C152_transponder_thousands= deferred_dataref("ZLSimulation/C152/radios/transponder_thousands", "number")
 C152_transponder_hundreds = deferred_dataref("ZLSimulation/C152/radios/transponder_hundreds", "number")
-C152_transponder_tens = deferred_dataref("ZLSimulation/C152/radios/transponder_tens", "number")
-C152_transponder_ones = deferred_dataref("ZLSimulation/C152/radios/transponder_ones", "number")
+C152_transponder_tens     = deferred_dataref("ZLSimulation/C152/radios/transponder_tens", "number")
+C152_transponder_ones     = deferred_dataref("ZLSimulation/C152/radios/transponder_ones", "number")
 
 -- Cabin Air
-C152_cabin_air_ratio = deferred_dataref("ZLSimulation/C152/air/cabin_air_ratio", "number")
-C152_cabin_ht_ratio  = deferred_dataref("ZLSimulation/C152/air/cabin_ht_ratio", "number")
+C152_cabin_air_ratio      = deferred_dataref("ZLSimulation/C152/air/cabin_air_ratio", "number")
+C152_cabin_ht_ratio       = deferred_dataref("ZLSimulation/C152/air/cabin_ht_ratio", "number")
 
 -- Anims
 
@@ -503,6 +509,12 @@ function window_r_toggle_CMDhandler(phase, duration)
     end
 end
 
+--Control Lock Toggle
+function control_lock_toggle_CMDhandler(phase, duration)
+	if phase == 0 then
+		simDR_controls_lock = (6 - simDR_controls_lock)
+	end
+end
 
 --*************************************************************************************--
 --**                              CREATE CUSTOM COMMANDS                             **--
@@ -535,6 +547,7 @@ C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/do
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
 C152CMD_window_l_toggle          = deferred_command("ZLSimulation/C152/extras/window_l_toggle", "toggle left window", window_l_toggle_CMDhandler)
 C152CMD_window_r_toggle          = deferred_command("ZLSimulation/C152/extras/window_r_toggle", "toggle right window", window_r_toggle_CMDhandler)
+C152CMD_control_lock_toggle      = deferred_command("ZLSimulation/C152/extras/control_lock_toggle", "toggle control lock", control_lock_toggle_CMDhandler)
 
 
 --*************************************************************************************--
@@ -627,7 +640,16 @@ function exterior_muffling()
 	else
 		C152_exterior_muffling = 1 - (0.4*simDR_door_open_ratio[0] + 0.4*simDR_door_open_ratio[1])
 	end
-	print(C152_exterior_muffling)
+end
+
+function yoke_lock()
+	if simDR_controls_lock == 6 then
+		C152_yoke_roll_ratio = 0
+		C152_yoke_pitch_ratio = 0
+	else
+		C152_yoke_roll_ratio = simDR_yoke_roll_ratio
+		C152_yoke_pitch_ratio = simDR_yoke_pitch_ratio
+	end
 end
 
 --****************************************************************************	*********--
@@ -643,6 +665,11 @@ function flight_start()
 	C152_cabin_ht_ratio = 0
 	C152_cockpit_shade_l = 0
 	C152_cockpit_shade_r = 0
+	if startup_running ~= 1 then
+		simDR_controls_lock = 6
+	else
+		simDR_controls_lock = 0
+	end
 end
 --function aircraft_unload()
 
@@ -652,6 +679,7 @@ end
 
 function after_physics()
 	exterior_muffling()
+	yoke_lock()
     animate_drawer()
     animate_windows()
 	animate_primer()

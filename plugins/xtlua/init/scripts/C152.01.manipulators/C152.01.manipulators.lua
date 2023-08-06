@@ -1,7 +1,7 @@
 --[[
 *****************************************************************************************
 
-Copyright Alejandro Zuluaga 2021. All rights reserved
+Copyright Alejandro Zuluaga 2021-2023. All rights reserved
 
 This file and its contents are suplied under the terms of the
 Creative Commons Attribution 4.0 International Public License (CC BY-NC 4.0)
@@ -56,14 +56,17 @@ C152CMD_right_door_toggle        = deferred_command("ZLSimulation/C152/extras/do
 C152CMD_left_door_toggle         = deferred_command("ZLSimulation/C152/extras/door_toggle_l", "toggle door", l_door_CMDhandler)
 C152CMD_window_l_toggle          = deferred_command("ZLSimulation/C152/extras/window_l_toggle", "toggle left window", window_l_toggle_CMDhandler)
 C152CMD_window_r_toggle          = deferred_command("ZLSimulation/C152/extras/window_r_toggle", "toggle right window", window_r_toggle_CMDhandler)
+C152CMD_control_lock_toggle      = deferred_command("ZLSimulation/C152/extras/control_lock_toggle", "toggle control lock", control_lock_toggle_CMDhandler)
 
 --*************************************************************************************--
 --**                             CREATE CUSTOM DATAREFS                              **--
 --*************************************************************************************--
+C152_yoke_roll_ratio      = deferred_dataref("ZLSimulation/C152/controls/yoke_roll_ratio", "number")
+C152_yoke_pitch_ratio      = deferred_dataref("ZLSimulation/C152/controls/yoke_pitch_ratio", "number")
 C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") -- Alternator
 C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") --Circuit Breakers
 C152_panel_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/panel_lt", "number")
-C152_radio_lt_dref       = deferred_dataref("ZLSimulation/C152/electrical/radio_lt", "number")
+C152_radio_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/radio_lt", "number")
 
 -- Switch Panel
 
@@ -81,14 +84,14 @@ C152_flap_lever           = deferred_dataref("ZLSimulation/C152/electrical/flap_
 
 -- Transponder
 
-C152_transponder_thousands = deferred_dataref("ZLSimulation/C152/radios/transponder_thousands", "number")
+C152_transponder_thousands= deferred_dataref("ZLSimulation/C152/radios/transponder_thousands", "number")
 C152_transponder_hundreds = deferred_dataref("ZLSimulation/C152/radios/transponder_hundreds", "number")
-C152_transponder_tens = deferred_dataref("ZLSimulation/C152/radios/transponder_tens", "number")
-C152_transponder_ones = deferred_dataref("ZLSimulation/C152/radios/transponder_ones", "number")
+C152_transponder_tens     = deferred_dataref("ZLSimulation/C152/radios/transponder_tens", "number")
+C152_transponder_ones     = deferred_dataref("ZLSimulation/C152/radios/transponder_ones", "number")
 
 -- Cabin Air
-C152_cabin_air_ratio = deferred_dataref("ZLSimulation/C152/air/cabin_air_ratio", "number")
-C152_cabin_ht_ratio  = deferred_dataref("ZLSimulation/C152/air/cabin_ht_ratio", "number")
+C152_cabin_air_ratio      = deferred_dataref("ZLSimulation/C152/air/cabin_air_ratio", "number")
+C152_cabin_ht_ratio       = deferred_dataref("ZLSimulation/C152/air/cabin_ht_ratio", "number")
 
 -- Anims
 
