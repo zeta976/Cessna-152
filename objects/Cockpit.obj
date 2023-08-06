@@ -4799,11 +4799,11 @@ IDX	4211
 	ANIM_end
 	ANIM_begin
 	ANIM_trans	0.067740001	-0.76401001	-1.94082	0.067740001	-0.76401001	-1.94082
-	ANIM_rotate_begin	0	0	-1	sim/cockpit/engine/fuel_tank_selector
+	ANIM_rotate_begin	0	0	-1	sim/cockpit2/fuel/fuel_tank_selector
 	ANIM_rotate_key	4	0
 	ANIM_rotate_key	0	90.000207
 	ANIM_rotate_end
-		ATTR_manip_toggle	hand	4.000	0.000	sim/cockpit/engine/fuel_tank_selector	fuel_shutoff
+		ATTR_manip_toggle	hand	4.000	0.000	sim/cockpit2/fuel/fuel_tank_selector	fuel_shutoff
 		TRIS	408 30
 	ANIM_end
 	ANIM_begin

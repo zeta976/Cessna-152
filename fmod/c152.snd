@@ -355,3 +355,19 @@ BEGIN_SOUND_ATTACHMENT
     VEH_PART cockpit 0
     EVENT_START_COND sim/cockpit2/controls/parking_brake_ratio == 1
 END_SOUND_ATTACHMENT
+
+####################
+# FUEL SHUTOFF
+####################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /fuel_shutoff
+	VEH_PART cockpit 0
+	EVENT_START_COND sim/cockpit/engine/fuel_tank_selector == 0
+END_SOUND_ATTACHMENT
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /fuel_shutoff
+	VEH_PART cockpit 0
+	EVENT_START_COND ABS_DELTA=sim/cockpit2/fuel/fuel_tank_selector > 0
+END_SOUND_ATTACHMENT
