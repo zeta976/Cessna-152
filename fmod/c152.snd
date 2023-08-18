@@ -371,3 +371,14 @@ BEGIN_SOUND_ATTACHMENT
 	VEH_PART cockpit 0
 	EVENT_START_COND ABS_DELTA=sim/cockpit2/fuel/fuel_tank_selector > 0
 END_SOUND_ATTACHMENT
+
+####################
+# STALL HORN
+####################
+
+BEGIN_SOUND_ATTACHMENT
+	EVENT_NAME /stall_horn
+	VEH_PART cockpit 0
+	EVENT_START_COND sim/cockpit2/annunciators/stall_warning == 1
+	EVENT_AUTO_END_FROM_START_COND
+END_SOUND_ATTACHMENT

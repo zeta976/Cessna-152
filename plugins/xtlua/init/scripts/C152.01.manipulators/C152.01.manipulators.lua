@@ -62,11 +62,12 @@ C152CMD_control_lock_toggle      = deferred_command("ZLSimulation/C152/extras/co
 --**                             CREATE CUSTOM DATAREFS                              **--
 --*************************************************************************************--
 C152_yoke_roll_ratio      = deferred_dataref("ZLSimulation/C152/controls/yoke_roll_ratio", "number")
-C152_yoke_pitch_ratio      = deferred_dataref("ZLSimulation/C152/controls/yoke_pitch_ratio", "number")
-C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") -- Alternator
+C152_yoke_pitch_ratio     = deferred_dataref("ZLSimulation/C152/controls/yoke_pitch_ratio", "number")
+C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number")
 C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") --Circuit Breakers
 C152_panel_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/panel_lt", "number")
 C152_radio_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/radio_lt", "number")
+C152_landing_lt           = deferred_dataref("ZLSimulation/C152/electrical/landing_lt", "number")
 
 -- Switch Panel
 
