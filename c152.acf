@@ -4874,6 +4874,7 @@ P _gear/8/_gear_type 0
 P _gear/9/_gear_type 0
 P _gear/count 10
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 P _lite/0/_dist 200.000000000
 P _lite/0/_hide 0
 P _lite/0/_index 0
@@ -4898,6 +4899,12 @@ P _lite/count 1
 P _lite_equip/_land_lite_off_on_retract_EQ 0
 P _lite_equip/_taxi_lite_off_on_retract_EQ 0
 P _obja/0/_obj_flags 16
+=======
+P _lite/count 0
+P _lite_equip/_land_lite_off_on_retract_EQ 0
+P _lite_equip/_taxi_lite_off_on_retract_EQ 0
+P _obja/0/_obj_flags 0
+>>>>>>> Stashed changes
 =======
 P _lite/count 0
 P _lite_equip/_land_lite_off_on_retract_EQ 0
@@ -5112,7 +5119,11 @@ P _obja/9/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/9/_v10_is_internal 985765424
 P _obja/9/_v10_steers_with_gear 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 P _obja/count 13
+=======
+P _obja/count 16
+>>>>>>> Stashed changes
 =======
 P _obja/count 16
 >>>>>>> Stashed changes
@@ -21930,8 +21941,13 @@ P acf/_AShi_alpha_sec 0.000000000
 P acf/_AShi_beta_k 0.000000000
 P acf/_AShi_beta_sec 0.000000000
 P acf/_AShi_hdng_rat 1.000000000
+<<<<<<< Updated upstream
 P acf/_AShi_max_G 100.900001526
 P acf/_AShi_max_G_init 99.900001526
+=======
+P acf/_AShi_max_G 4.000000000
+P acf/_AShi_max_G_init 2.000000000
+>>>>>>> Stashed changes
 P acf/_AShi_max_alpha 0.000000000
 P acf/_AShi_max_beta 0.000000000
 P acf/_AShi_max_phidot 0.000000000
@@ -24248,8 +24264,13 @@ P acf/_flap_retract_protect 0
 P acf/_flap_speed_rat_at_0 1.000000000
 P acf/_flaps_are_infinite 0
 P acf/_flaps_with_gear_EQ 0
+<<<<<<< Updated upstream
 P acf/_flaps_with_stall_rat_0 1.000000000
 P acf/_flaps_with_stall_rat_1 1.000000000
+=======
+P acf/_flaps_with_stall_rat_0 0.000000000
+P acf/_flaps_with_stall_rat_1 0.000000000
+>>>>>>> Stashed changes
 P acf/_flaps_with_vec_EQ 0
 P acf/_flaps_with_vector 0
 P acf/_flare_max 0
@@ -24390,7 +24411,11 @@ P acf/_ground_pwr/count 3
 P acf/_gyro_spooldown_time 60.000000000
 P acf/_gyro_spoolup_time 5.000000000
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 P acf/_h_eqlbm 3.937901258
+=======
+P acf/_h_eqlbm 3.937901020
+>>>>>>> Stashed changes
 =======
 P acf/_h_eqlbm 3.937901020
 >>>>>>> Stashed changes
@@ -24435,8 +24460,13 @@ P acf/_has_spot_lite 0
 P acf/_has_vac_cross_tied 0
 P acf/_has_vac_venturi 0
 P acf/_has_yawdamp_but 0
+<<<<<<< Updated upstream
 P acf/_hdng_acft_lf_trim_rat 0.217391297
 P acf/_hdng_acft_rt_trim_rat 0.217391297
+=======
+P acf/_hdng_acft_lf_trim_rat 0.250000000
+P acf/_hdng_acft_rt_trim_rat 0.250000000
+>>>>>>> Stashed changes
 P acf/_hdng_acft_trim_mode 0
 P acf/_hdng_max_full_def_KIAS 999.000000000
 P acf/_heat_x_ctr 0.000000000
@@ -24697,9 +24727,15 @@ P acf/_prop_inlet_recovery_v12 0.000000000
 P acf/_prop_pitch_deg_per_sec 45.000000000
 P acf/_prop_pitch_deg_per_sec_unfeather 5.000000000
 P acf/_prop_x_ctr 0.000000000
+<<<<<<< Updated upstream
 P acf/_ptch_acft_dn_trim_rat 0.277777791
 P acf/_ptch_acft_trim_mode 0
 P acf/_ptch_acft_up_trim_rat 0.400000006
+=======
+P acf/_ptch_acft_dn_trim_rat 0.500000000
+P acf/_ptch_acft_trim_mode 0
+P acf/_ptch_acft_up_trim_rat 0.500000000
+>>>>>>> Stashed changes
 P acf/_ptch_but_adjusts_alt_hold 0
 P acf/_ptch_max_full_def_KIAS 999.000000000
 P acf/_puff_LMN/0 0.000000000
@@ -24810,8 +24846,13 @@ P acf/_rock_h_opt 0.000000000
 P acf/_rock_max_opt 1.000000000
 P acf/_rock_max_sl 1.000000000
 P acf/_rock_max_vac 1.000000000
+<<<<<<< Updated upstream
 P acf/_roll_acft_lf_trim_rat 0.333333343
 P acf/_roll_acft_rt_trim_rat 0.250000000
+=======
+P acf/_roll_acft_lf_trim_rat 0.000000000
+P acf/_roll_acft_rt_trim_rat 0.000000000
+>>>>>>> Stashed changes
 P acf/_roll_acft_trim_mode 0
 P acf/_roll_co 0.025000000
 P acf/_roll_max_full_def_KIAS 999.000000000
@@ -25135,7 +25176,11 @@ P acf/_tank_xyz_full/8,2 0.000000000
 P acf/_tank_xyz_full/i_count 9
 P acf/_tank_xyz_full/j_count 3
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 P acf/_the_eqlbm 2.552334309
+=======
+P acf/_the_eqlbm 2.552250624
+>>>>>>> Stashed changes
 =======
 P acf/_the_eqlbm 2.552250624
 >>>>>>> Stashed changes
