@@ -25,10 +25,14 @@ POINT_COUNTS	0	0	0	0
 		LIGHT_NAMED	airplane_nav_tail -0.00000005 0.98155224 0.25556323
 	ANIM_end
 	LIGHT_NAMED	airplane_beacon 0 1.6112331 3.4759583
-	LIGHT_PARAM	airplane_nav_right_size 5.8398824 0.52374566 -2.1114833 1 0
-	LIGHT_PARAM	airplane_nav_left_size -5.8415837 0.52374566 -2.1114833 1 0
+	LIGHT_PARAM	airplane_nav_right_size 5.8398824 0.52374566 -2.1114833 0.80000001 0
+	LIGHT_PARAM	airplane_nav_left_size -5.8415837 0.52374566 -2.1114833 0.80000001 0
 	LIGHT_PARAM	airplane_landing_core 0 -0.72178501 -3.814075 0 0 0 0 0.4
 	LIGHT_PARAM	airplane_landing_flare 0 -0.72178501 -3.814075 0 0 0 0 1
 	LIGHT_PARAM	airplane_landing_glow 0 -0.72178501 -3.814075 0 0 0 0 0.5
+	ANIM_begin
+	ANIM_rotate	-1	0	-0	5.7491796	5.7491796
+	LIGHT_PARAM	airplane_landing_sp -0.0000837 -0.33320296 -3.8921168 0.84130198 0.78458232 0.68765706 0 180 0.93969261
+	ANIM_end
 
-# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.1.0-beta.1+101.20201117225215
+# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.2.0-rc.3+117.20230225221007

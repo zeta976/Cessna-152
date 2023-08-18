@@ -6,6 +6,8 @@ GLOBAL_cockpit_lit
 TEXTURE	radios.png
 TEXTURE_LIT	radios_LIT.png
 TEXTURE_NORMAL	radios_NRM.png
+NORMAL_METALNESS
+GLOBAL_specular	1
 POINT_COUNTS	17631	0	0	17631
 
 VT	0.015272742	-0.19154561	-2.4699938	-0.58778191	-0.80901957	-0	0.62201655	0.62655246
@@ -19406,7 +19408,6 @@ IDX10	17620	17621	17622	17623	17624	17625	17626	17627	17628	17629
 IDX	17630
 
 	ATTR_light_level 0 1	ZLSimulation/C152/electrical/radio_lt
-	ATTR_shiny_rat	0.5
 	TRIS	0 294
 	TRIS	294 534
 	TRIS	828 294
@@ -19718,4 +19719,4 @@ IDX	17630
 	ATTR_light_level 0 1	sim/cockpit/misc/outer_marker_lit
 	TRIS	17145 6
 
-# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.2.0-rc.2+117.20220419015723
+# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.2.0-rc.3+117.20230225221007

@@ -64,7 +64,7 @@ simDR_startup_running  = find_dataref("sim/operation/prefs/startup_running")
 simDR_yoke_roll_ratio  = find_dataref("sim/cockpit2/controls/yoke_roll_ratio")
 simDR_yoke_pitch_ratio = find_dataref("sim/cockpit2/controls/yoke_pitch_ratio")
 simDR_controls_lock    = find_dataref("sim/operation/failures/rel_conlock")
-
+simDR_landing_lt_br    = find_dataref("sim/flightmodel2/lights/landing_lights_brightness_ratio")
 --*************************************************************************************--
 --**                                  FIND DATAREFS                                  **--
 --*************************************************************************************--
@@ -82,10 +82,11 @@ simDR_controls_lock    = find_dataref("sim/operation/failures/rel_conlock")
 
 C152_yoke_roll_ratio      = deferred_dataref("ZLSimulation/C152/controls/yoke_roll_ratio", "number")
 C152_yoke_pitch_ratio     = deferred_dataref("ZLSimulation/C152/controls/yoke_pitch_ratio", "number")
-C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number") -- Alternator
+C152_alternator_switch    = deferred_dataref("ZLSimulation/C152/electrical/alternator_switch", "number")
 C152_circuit_breakers     = deferred_dataref("ZLSimulation/C152/electrical/circuit_breakers_position" , "array[11]") --Circuit Breakers
 C152_panel_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/panel_lt", "number")
 C152_radio_lt_dref        = deferred_dataref("ZLSimulation/C152/electrical/radio_lt", "number")
+C152_landing_lt           = deferred_dataref("ZLSimulation/C152/electrical/landing_lt", "number")
 
 -- Switch Panel
 
@@ -249,12 +250,12 @@ end
 
 function flaps_up_CMDhandler(phase, duration)
     if phase == 0 and C152_flap_lever > 0.33 then
-        C152_flap_lever = C152_flap_lever - (10/30)
+        C152_flap_lever = C152_flap_lever - (1/3)
     end
 end
 function flaps_dn_CMDhandler(phase,duration)
     if phase == 0 and C152_flap_lever < 1.0 then
-        C152_flap_lever = C152_flap_lever + (10/30)
+        C152_flap_lever = C152_flap_lever + (1/3)
     end
 end
 
@@ -678,6 +679,11 @@ end
 --function before_physics()
 
 function after_physics()
+	if simDR_landing_lt_br[0] > 0.1 then
+		C152_landing_lt = 1
+	else
+		C152_landing_lt = 0
+	end
 	exterior_muffling()
 	yoke_lock()
     animate_drawer()

@@ -25944,17 +25944,17 @@ IDX	23504
 	ANIM_end
 	TRIS	16335 900
 	ANIM_begin
-	ANIM_trans_begin	sim/flightmodel/controls/flaprat
+	ANIM_trans_begin	sim/flightmodel2/controls/flap1_deploy_ratio
 	ANIM_trans_key	0	-1.51333	0.35991001	-1.06163
 	ANIM_trans_key	0.5	-1.51333	0.35741001	-1.0021501
 	ANIM_trans_key	1	-1.51333	0.35978001	-0.94265997
 	ANIM_trans_end
-	ANIM_rotate_begin	0	0	-1	sim/flightmodel/controls/flaprat
+	ANIM_rotate_begin	0	0	-1	sim/flightmodel2/controls/flap1_deploy_ratio
 	ANIM_rotate_key	0	0.84167498
 	ANIM_rotate_key	0.5	0.84167498
 	ANIM_rotate_key	1	0.84167498
 	ANIM_rotate_end
-	ANIM_rotate_begin	1	0	-0	sim/flightmodel/controls/flaprat
+	ANIM_rotate_begin	1	0	-0	sim/flightmodel2/controls/flap1_deploy_ratio
 	ANIM_rotate_key	0	0
 	ANIM_rotate_key	0.5	15.000035
 	ANIM_rotate_key	1	30.000069
@@ -25962,17 +25962,17 @@ IDX	23504
 		TRIS	17235 1296
 	ANIM_end
 	ANIM_begin
-	ANIM_trans_begin	sim/flightmodel/controls/flaprat
+	ANIM_trans_begin	sim/flightmodel2/controls/flap1_deploy_ratio
 	ANIM_trans_key	0	1.51333	0.35991001	-1.06163
 	ANIM_trans_key	0.5	1.51333	0.35741001	-1.0021501
 	ANIM_trans_key	1	1.51333	0.35978001	-0.94265997
 	ANIM_trans_end
-	ANIM_rotate_begin	0	0	-1	sim/flightmodel/controls/flaprat
+	ANIM_rotate_begin	0	0	-1	sim/flightmodel2/controls/flap1_deploy_ratio
 	ANIM_rotate_key	0	-0.84167498
 	ANIM_rotate_key	0.5	-0.84167498
 	ANIM_rotate_key	1	-0.84167498
 	ANIM_rotate_end
-	ANIM_rotate_begin	1	0	-0	sim/flightmodel/controls/flaprat
+	ANIM_rotate_begin	1	0	-0	sim/flightmodel2/controls/flap1_deploy_ratio
 	ANIM_rotate_key	0	0
 	ANIM_rotate_key	0.5	15.000035
 	ANIM_rotate_key	1	30.000069
@@ -26020,4 +26020,4 @@ IDX	23504
 	TRIS	19827 1524
 	TRIS	21351 2028
 
-# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.2.0-rc.2+117.20220419015723
+# Build with Blender 2.83.2 (build b'239fbf7d936f'). Exported with XPlane2Blender 4.2.0-rc.3+117.20230225221007

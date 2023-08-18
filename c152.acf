@@ -4873,6 +4873,7 @@ P _gear/7/_gear_type 0
 P _gear/8/_gear_type 0
 P _gear/9/_gear_type 0
 P _gear/count 10
+<<<<<<< Updated upstream
 P _lite/0/_dist 200.000000000
 P _lite/0/_hide 0
 P _lite/0/_index 0
@@ -4897,6 +4898,12 @@ P _lite/count 1
 P _lite_equip/_land_lite_off_on_retract_EQ 0
 P _lite_equip/_taxi_lite_off_on_retract_EQ 0
 P _obja/0/_obj_flags 16
+=======
+P _lite/count 0
+P _lite_equip/_land_lite_off_on_retract_EQ 0
+P _lite_equip/_taxi_lite_off_on_retract_EQ 0
+P _obja/0/_obj_flags 0
+>>>>>>> Stashed changes
 P _obja/0/_v10_att_body -1
 P _obja/0/_v10_att_file_stl lights.obj
 P _obja/0/_v10_att_gear -1
@@ -4961,6 +4968,45 @@ P _obja/12/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/12/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/12/_v10_is_internal 58037808
 P _obja/12/_v10_steers_with_gear 0
+P _obja/13/_obj_flags 16
+P _obja/13/_v10_att_body -1
+P _obja/13/_v10_att_file_stl misc2.obj
+P _obja/13/_v10_att_gear -1
+P _obja/13/_v10_att_phi_ref 0.000000000
+P _obja/13/_v10_att_psi_ref 0.000000000
+P _obja/13/_v10_att_the_ref 0.000000000
+P _obja/13/_v10_att_wing -1
+P _obja/13/_v10_att_x_acf_prt_ref 0.000000000
+P _obja/13/_v10_att_y_acf_prt_ref 0.688976347
+P _obja/13/_v10_att_z_acf_prt_ref 13.188976288
+P _obja/13/_v10_is_internal 0
+P _obja/13/_v10_steers_with_gear 0
+P _obja/14/_obj_flags 8194
+P _obja/14/_v10_att_body -1
+P _obja/14/_v10_att_file_stl GlassExt.obj
+P _obja/14/_v10_att_gear -1
+P _obja/14/_v10_att_phi_ref 0.000000000
+P _obja/14/_v10_att_psi_ref 0.000000000
+P _obja/14/_v10_att_the_ref 0.000000000
+P _obja/14/_v10_att_wing -1
+P _obja/14/_v10_att_x_acf_prt_ref 0.000000000
+P _obja/14/_v10_att_y_acf_prt_ref 0.688976347
+P _obja/14/_v10_att_z_acf_prt_ref 13.188976288
+P _obja/14/_v10_is_internal 5
+P _obja/14/_v10_steers_with_gear 0
+P _obja/15/_obj_flags 8195
+P _obja/15/_v10_att_body -1
+P _obja/15/_v10_att_file_stl Glass_int.obj
+P _obja/15/_v10_att_gear -1
+P _obja/15/_v10_att_phi_ref 0.000000000
+P _obja/15/_v10_att_psi_ref 0.000000000
+P _obja/15/_v10_att_the_ref 0.000000000
+P _obja/15/_v10_att_wing -1
+P _obja/15/_v10_att_x_acf_prt_ref 0.000000000
+P _obja/15/_v10_att_y_acf_prt_ref 0.688976347
+P _obja/15/_v10_att_z_acf_prt_ref 13.188976288
+P _obja/15/_v10_is_internal 0
+P _obja/15/_v10_steers_with_gear 0
 P _obja/2/_obj_flags 13
 P _obja/2/_v10_att_body -1
 P _obja/2/_v10_att_file_stl Interior1.obj
@@ -5065,7 +5111,11 @@ P _obja/9/_v10_att_y_acf_prt_ref 0.688976347
 P _obja/9/_v10_att_z_acf_prt_ref 13.188976288
 P _obja/9/_v10_is_internal 985765424
 P _obja/9/_v10_steers_with_gear 0
+<<<<<<< Updated upstream
 P _obja/count 13
+=======
+P _obja/count 16
+>>>>>>> Stashed changes
 P _prop/0/_des_AOA_pwr 1.000000000
 P _prop/0/_des_AOA_root 0.000000000
 P _prop/0/_des_AOA_tip 0.000000000
@@ -24339,7 +24389,11 @@ P acf/_ground_pwr/2 0.000000000
 P acf/_ground_pwr/count 3
 P acf/_gyro_spooldown_time 60.000000000
 P acf/_gyro_spoolup_time 5.000000000
+<<<<<<< Updated upstream
 P acf/_h_eqlbm 3.937901258
+=======
+P acf/_h_eqlbm 3.937901020
+>>>>>>> Stashed changes
 P acf/_has_ADG 0
 P acf/_has_APU_bleed_air 0
 P acf/_has_APU_generator 0
@@ -25080,7 +25134,11 @@ P acf/_tank_xyz_full/8,1 0.000000000
 P acf/_tank_xyz_full/8,2 0.000000000
 P acf/_tank_xyz_full/i_count 9
 P acf/_tank_xyz_full/j_count 3
+<<<<<<< Updated upstream
 P acf/_the_eqlbm 2.552334309
+=======
+P acf/_the_eqlbm 2.552250624
+>>>>>>> Stashed changes
 P acf/_thro_non_vect_props_at_sin_vect 0
 P acf/_thro_x_ctr 0.000000000
 P acf/_throt_max_fwd_emr 1.000000000

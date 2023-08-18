@@ -49,11 +49,11 @@ simDR_startup_running      = find_dataref("sim/operation/prefs/startup_running")
 simDR_battery_on           = find_dataref("sim/cockpit/electrical/battery_on")
 simDR_generator_on         = find_dataref("sim/cockpit/electrical/generator_on")
 simDR_pitot_heat_on        = find_dataref("sim/cockpit/switches/pitot_heat_on")
-simDR_landing_lights_on    = find_dataref("sim/cockpit/electrical/landing_lights_on")
+simDR_landing_lights_on    = find_dataref("sim/cockpit2/switches/landing_lights_on")
 simDR_nav_lights_on        = find_dataref("sim/cockpit/electrical/nav_lights_on")
 simDR_beacon_lights_on     = find_dataref("sim/cockpit/electrical/beacon_lights_on")
 simDR_fuel_quantity        = find_dataref("sim/cockpit2/fuel/fuel_quantity")
-simDR_flap_lever           = find_dataref("sim/cockpit2/controls/flap_ratio")
+simDR_flap_lever           = find_dataref("sim/cockpit2/controls/flap_handle_request_ratio")
 simDR_cockpit_brightness   = find_dataref("sim/cockpit/electrical/cockpit_lights")
 simDR_com2_pwr             = find_dataref("sim/cockpit2/radios/actuators/com2_power")
 simDR_hsi_copilot_src      = find_dataref("sim/cockpit2/radios/actuators/HSI_source_select_copilot")
@@ -150,7 +150,7 @@ function circuit_breakers()
     end
 
     --Circuit breaker 5 (flaps)
-    if C152_circuit_breakers[4] == 1 and C152_flap_lever >= 0 then
+    if C152_circuit_breakers[4] == 1 and C152_flap_lever >= 0.0 then
         simDR_flap_lever = C152_flap_lever
     end
     
